@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WPS表格培训教程</title>
+    <link rel="stylesheet" href="lib/reveal.js/reveal.css">
+    <link rel="stylesheet" href="lib/reveal.js/white.css">
+    <link rel="stylesheet" href="lib/highlight.js/default.min.css">
+    <link rel="stylesheet" href="css/custom.css"</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- 封面 -->
+            <section>
+                <h1>WPS表格培训教程</h1>
+                <h3>从入门到精通</h3>
+                <p><small>掌握公式、数组、快捷键与实战技巧</small></p>
+            </section>
+
+            <!-- 目录 -->
+            <section>
+                <h2>课程目录</h2>
+                <ol>
+                    <li class="fragment">常用公式讲解</li>
+                    <li class="fragment">数组应用</li>
+                    <li class="fragment">常用快捷键</li>
+                    <li class="fragment">进阶技巧</li>
+                    <li class="fragment">实战练习</li>
+                </ol>
+            </section>
+
+            <!-- 第1章：常用公式 -->
+            <section>
+                <section>
+                    <h2>第1章：常用公式讲解</h2>
+                    <p>掌握WPS表格中最实用的函数</p>
+                </section>
+
+                <section class="formula-slide">
+                    <div class="formula-left">
+                        <h3>SUM函数 - 求和计算</h3>
+                        <div class="formula-syntax">=SUM(数值1, [数值2], ...)</div>
+                        <div class="formula-params">
+                            <h4>参数说明：</h4>
+                            <div class="param-item">
+                                <span class="param-name">数值1</span>
+                                <span class="param-desc">要求和的第一个数值或单元格区域</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-name">数值2</span>
+                                <span class="param-desc">（可选）其他要相加的数值或区域</span>
+                            </div>
+                        </div>
+                        <div class="formula-principle fragment" data-fragment-index="5">
+                            <strong>💡 实现原理：</strong>将指定范围内的所有数值相加，返回总和。支持最多255个参数，可以是数字、单元格引用或区域。
+                        </div>
+                    </div>
+                    <div class="formula-right">
+                        <div class="formula-animation" id="sum-demo">
+                            <div class="calculation-flow">
+                                <div class="fragment" data-fragment-index="0">
+                                    <table class="excel-table">
+                                        <tr><th class="row-header"></th><th class="col-header">A</th></tr>
+                                        <tr><td class="row-header">1</td><td class="cell header">成绩</td></tr>
+                                        <tr><td class="row-header">2</td><td class="cell highlight-yellow">85</td></tr>
+                                        <tr><td class="row-header">3</td><td class="cell highlight-yellow">92</td></tr>
+                                        <tr><td class="row-header">4</td><td class="cell highlight-yellow">78</td></tr>
+                                        <tr><td class="row-header">5</td><td class="cell highlight-yellow">96</td></tr>
+                                    </table>
+                                    <div style="margin-top: 10px; font-family: Consolas; font-size: 0.9em;">=SUM(A2:A5)</div>
+                                </div>
+                                <div class="fragment arrow" data-fragment-index="1">↓</div>
+                                <div class="fragment" data-fragment-index="2">
+                                    <div class="calc-step">
+                                        <div class="sum-process">
+                                            <span class="number">85</span><span class="operator">+</span><span class="number">92</span><span class="operator">+</span><span class="number">78</span><span class="operator">+</span><span class="number">96</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fragment arrow" data-fragment-index="3">↓</div>
+                                <div class="fragment result" data-fragment-index="4">
+                                    <div class="final-result">= <strong>351</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="formula-slide">
+                    <div class="formula-left">
+                        <h3>AVERAGE函数 - 平均值计算</h3>
+                        <div class="formula-syntax">=AVERAGE(数值1, [数值2], ...)</div>
+                        <div class="formula-params">
+                            <h4>参数说明：</h4>
+                            <div class="param-item">
+                                <span class="param-name">数值1</span>
+                                <span class="param-desc">要计算平均值的第一个数值或单元格区域</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-name">数值2</span>
+                                <span class="param-desc">（可选）其他要计算平均值的数值或区域</span>
+                            </div>
+                        </div>
+                        <div class="formula-principle fragment" data-fragment-index="5">
+                            <strong>💡 实现原理：</strong>先计算所有数值的总和，再除以数值的个数。自动忽略空单元格和文本。
+                        </div>
+                    </div>
+                    <div class="formula-right">
+                        <div class="formula-animation" id="average-demo">
+                            <div class="calculation-flow">
+                                <div class="fragment" data-fragment-index="0">
+                                    <table class="excel-table">
+                                        <tr><th class="row-header"></th><th class="col-header">A</th></tr>
+                                        <tr><td class="row-header">1</td><td class="cell header">成绩</td></tr>
+                                        <tr><td class="row-header">2</td><td class="cell highlight-yellow">80</td></tr>
+                                        <tr><td class="row-header">3</td><td class="cell highlight-yellow">90</td></tr>
+                                        <tr><td class="row-header">4</td><td class="cell highlight-yellow">85</td></tr>
+                                        <tr><td class="row-header">5</td><td class="cell highlight-yellow">95</td></tr>
+                                    </table>
+                                    <div style="margin-top: 10px; font-family: Consolas; font-size: 0.9em;">=AVERAGE(A2:A6)</div>
+                                </div>
+                                <div class="fragment arrow" data-fragment-index="1">↓</div>
+                                <div class="fragment" data-fragment-index="2">
+                                    <div class="calc-step">
+                                        <div style="font-size: 0.9em;">
+                                            <div>总和：80+90+85+95 = 438</div>
+                                            <div>个数：4个</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fragment arrow" data-fragment-index="3">↓</div>
+                                <div class="fragment result" data-fragment-index="4">
+                                    <div class="final-result">= <strong>87.6</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="formula-slide">
+                    <div class="formula-left">
+                        <h3>MAX/MIN函数 - 最大最小值</h3>
+                        <div class="formula-syntax">=MAX(数值1, [数值2], ...)<br>=MIN(数值1, [数值2], ...)</div>
+                        <div class="formula-params">
+                            <h4>参数说明：</h4>
+                            <div class="param-item">
+                                <span class="param-name">数值1</span>
+                                <span class="param-desc">要查找最大值/最小值的第一个数值或单元格区域</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-name">数值2</span>
+                                <span class="param-desc">（可选）其他要比较的数值或区域</span>
+                            </div>
+                        </div>
+                        <div class="formula-principle fragment" data-fragment-index="5">
+                            <strong>💡 实现原理：</strong>遍历所有数值进行比较，MAX返回最大值，MIN返回最小值。支持最多255个参数。
+                        </div>
+                    </div>
+                    <div class="formula-right">
+                        <div class="formula-animation" id="maxmin-demo">
+                            <div class="calculation-flow">
+                                <div class="fragment" data-fragment-index="0">
+                                    <table class="excel-table">
+                                        <tr><th class="row-header"></th><th class="col-header">A</th></tr>
+                                        <tr><td class="row-header">1</td><td class="cell header">成绩</td></tr>
+                                        <tr><td class="row-header">2</td><td class="cell">65</td></tr>
+                                        <tr><td class="row-header">3</td><td class="cell highlight-green">92</td></tr>
+                                        <tr><td class="row-header">4</td><td class="cell">78</td></tr>
+                                        <tr><td class="row-header">5</td><td class="cell">88</td></tr>
+                                        <tr><td class="row-header">6</td><td class="cell highlight-red">95</td></tr>
+                                    </table>
+                                    <div style="margin-top: 10px; font-family: Consolas; font-size: 0.9em;">=MAX(A2:A6) / =MIN(A2:A6)</div>
+                                </div>
+                                <div class="fragment arrow" data-fragment-index="1">↓</div>
+                                <div class="fragment" data-fragment-index="2">
+                                    <div class="calc-step">
+                                        <div style="font-size: 0.85em;">
+                                            <div>比较过程：65 → 92 → 78 → 88 → 95</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fragment arrow" data-fragment-index="3">↓</div>
+                                <div class="fragment result" data-fragment-index="4">
+                                    <div class="final-result">
+                                        <div>MAX = <strong>95</strong></div>
+                                        <div>MIN = <strong>65</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="formula-slide">
+                    <div class="formula-left">
+                        <h3>IF函数 - 逻辑判断</h3>
+                        <div class="formula-syntax">=IF(条件, 真值, [假值])</div>
+                        <div class="formula-params">
+                            <h4>参数说明：</h4>
+                            <div class="param-item">
+                                <span class="param-name">条件</span>
+                                <span class="param-desc">要判断的逻辑表达式，结果为TRUE或FALSE</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-name">真值</span>
+                                <span class="param-desc">条件为TRUE时返回的值</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-name">假值</span>
+                                <span class="param-desc">（可选）条件为FALSE时返回的值</span>
+                            </div>
+                        </div>
+                        <div class="formula-principle fragment" data-fragment-index="5">
+                            <strong>💡 实现原理：</strong>先计算条件表达式的值，如果为TRUE则返回真值，为FALSE则返回假值。支持嵌套使用实现多条件判断。
+                        </div>
+                    </div>
+                    <div class="formula-right">
+                        <div class="formula-animation" id="if-demo">
+                            <div class="calculation-flow">
+                                <div class="fragment" data-fragment-index="0">
+                                    <table class="excel-table">
+                                        <tr><th class="row-header"></th><th class="col-header">A</th><th class="col-header">B</th></tr>
+                                        <tr><td class="row-header">1</td><td class="cell header">成绩</td><td class="cell header">结果</td></tr>
+                                        <tr><td class="row-header">2</td><td class="cell highlight-yellow">85</td><td class="cell">?</td></tr>
+                                    </table>
+                                    <div style="margin-top: 10px; font-family: Consolas; font-size: 0.85em;">=IF(A2>=60,"及格","不及格")</div>
+                                </div>
+                                <div class="fragment arrow" data-fragment-index="1">↓</div>
+                                <div class="fragment" data-fragment-index="2">
+                                    <div class="calc-step" style="font-size: 0.85em;">
+                                        <div>判断：85 >= 60 ?</div>
+                                        <div style="color: #4CAF50; font-weight: bold;">TRUE ✓</div>
+                                    </div>
+                                </div>
+                                <div class="fragment arrow" data-fragment-index="3">↓</div>
+                                <div class="fragment result" data-fragment-index="4">
+                                    <div class="final-result">= <strong>"及格"</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="formula-slide">
+                    <div class="formula-left">
+                        <h3>VLOOKUP函数 - 垂直查找</h3>
+                        <div class="formula-syntax">=VLOOKUP(查找值, 区域, 列号, [匹配方式])</div>
+                        <div class="formula-params">
+                            <h4>参数说明：</h4>
+                            <div class="param-item">
+                                <span class="param-name">查找值</span>
+                                <span class="param-desc">要在首列查找的值</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-name">区域</span>
+                                <span class="param-desc">包含查找值和返回值的数据区域</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-name">列号</span>
+                                <span class="param-desc">返回值所在区域的列序号</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-name">匹配方式</span>
+                                <span class="param-desc">FALSE=精确匹配，TRUE=近似匹配</span>
+                            </div>
+                        </div>
+                        <div class="formula-principle fragment" data-fragment-index="5">
+                            <strong>💡 实现原理：</strong>在区域的首列查找匹配值，找到后返回该行指定列的数据。适用于数据表查询、信息匹配等场景。
+                        </div>
+                    </div>
+                    <div class="formula-right">
+                        <div class="formula-animation" id="vlookup-demo">
+                            <div class="calculation-flow">
+                                <div class="fragment" data-fragment-index="0">
+                                    <table class="excel-table" style="transform: scale(0.85);">
+                                        <tr><th class="row-header"></th><th class="col-header">A</th><th class="col-header">B</th></tr>
+                                        <tr><td class="row-header">1</td><td class="cell header">编号</td><td class="cell header">姓名</td></tr>
+                                        <tr><td class="row-header">2</td><td class="cell">A001</td><td class="cell">张三</td></tr>
+                                        <tr><td class="row-header">3</td><td class="cell highlight-yellow">A002</td><td class="cell highlight-green">李四</td></tr>
+                                        <tr><td class="row-header">4</td><td class="cell">A003</td><td class="cell">王五</td></tr>
+                                    </table>
+                                    <div style="margin-top: 8px; font-family: Consolas; font-size: 0.8em;">=VLOOKUP("A002",A:B,2,FALSE)</div>
+                                </div>
+                                <div class="fragment arrow" data-fragment-index="1">↓</div>
+                                <div class="fragment" data-fragment-index="2">
+                                    <div class="calc-step" style="font-size: 0.8em; padding: 6px;">
+                                        <div>1. 在A列查找"A002"</div>
+                                        <div>2. 找到第3行</div>
+                                        <div>3. 返回B列值</div>
+                                    </div>
+                                </div>
+                                <div class="fragment arrow" data-fragment-index="3">↓</div>
+                                <div class="fragment result" data-fragment-index="4">
+                                    <div class="final-result" style="padding: 8px 15px; font-size: 0.95em;">= <strong>"李四"</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- 第2章：数组 -->
+            <section>
+                <section>
+                    <h2>第2章：数组应用</h2>
+                    <p>一次性处理多组数据</p>
+                </section>
+
+                <section>
+                    <h3>什么是数组公式</h3>
+                    <div class="two-column">
+                        <div class="left-col">
+                            <div class="highlight-box">
+                                <strong>数组公式</strong>可以对<strong>一组或多组值</strong>执行计算，返回单个或多个结果
+                            </div>
+                            <div class="formula-params" style="margin-top: 20px;">
+                                <h4>与普通公式的区别：</h4>
+                                <ul style="font-size: 0.85em; line-height: 1.8;">
+                                    <li>普通公式：一次处理一个值</li>
+                                    <li>数组公式：一次处理一组值</li>
+                                    <li>可以执行复杂的批量计算</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right-col">
+                            <div class="demo-box" style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
+                                <h4 style="margin-top: 0; color: #333;">输入方法：</h4>
+                                <ol style="font-size: 0.85em; line-height: 2;">
+                                    <li>输入公式内容</li>
+                                    <li>按 <span class="key combo">Ctrl</span> + <span class="key combo">Shift</span> + <span class="key combo">Enter</span></li>
+                                    <li>公式自动加上大括号{}</li>
+                                </ol>
+                                <div style="background: #E3F2FD; padding: 10px; border-radius: 5px; margin-top: 10px; font-family: Consolas; font-size: 0.8em;">
+                                    示例：{=SUM(A1:A10*B1:B10)}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>SUMPRODUCT 函数 - 数组乘积求和</h3>
+                    <div class="two-column">
+                        <div class="left-col">
+                            <div class="formula-syntax" style="font-size: 0.9em;">=SUMPRODUCT(数组1, [数组2], ...)</div>
+                            <div class="formula-params" style="margin-top: 15px;">
+                                <h4>功能说明：</h4>
+                                <ul style="font-size: 0.8em; line-height: 1.8;">
+                                    <li>将多个数组的对应元素相乘</li>
+                                    <li>再将所有乘积相加</li>
+                                    <li>无需按Ctrl+Shift+Enter</li>
+                                </ul>
+                                <div class="formula-principle" style="margin-top: 15px; font-size: 0.8em;">
+                                    <strong>💡 原理：</strong>数量×单价=金额，再求和
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-col">
+                            <table class="excel-table" style="transform: scale(0.85); margin: 5px auto;">
+                                <tr><th class="row-header"></th><th class="col-header">A</th><th class="col-header">B</th><th class="col-header">C</th></tr>
+                                <tr><td class="row-header">1</td><td class="cell header">数量</td><td class="cell header">单价</td><td class="cell header">金额</td></tr>
+                                <tr><td class="row-header">2</td><td class="cell">10</td><td class="cell">50</td><td class="cell">500</td></tr>
+                                <tr><td class="row-header">3</td><td class="cell">5</td><td class="cell">80</td><td class="cell">400</td></tr>
+                                <tr><td class="row-header">4</td><td class="cell">8</td><td class="cell">30</td><td class="cell">240</td></tr>
+                            </table>
+                            <div style="text-align: center; margin-top: 10px; font-family: Consolas; font-size: 0.8em; background: #E8F5E9; padding: 8px; border-radius: 5px;">
+                                =SUMPRODUCT(A2:A4,B2:B4)<br>
+                                = 10×50 + 5×80 + 8×30<br>
+                                = <strong>1140</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>TRANSPOSE 函数 - 行列转置</h3>
+                    <div class="two-column">
+                        <div class="left-col">
+                            <div class="formula-syntax" style="font-size: 0.9em;">=TRANSPOSE(数组)</div>
+                            <div class="formula-params" style="margin-top: 15px;">
+                                <h4>功能说明：</h4>
+                                <ul style="font-size: 0.8em; line-height: 1.8;">
+                                    <li>将行数据转为列数据</li>
+                                    <li>将列数据转为行数据</li>
+                                    <li>输入后按Ctrl+Shift+Enter</li>
+                                </ul>
+                                <div class="formula-principle" style="margin-top: 15px; font-size: 0.8em;">
+                                    <strong>💡 应用场景：</strong>数据透视、报表转换、横向纵向对比
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-col">
+                            <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+                                <div>
+                                    <div style="font-size: 0.8em; margin-bottom: 5px; color: #666;">原数据（横向）：</div>
+                                    <table class="excel-table" style="transform: scale(0.8); margin: 0;">
+                                        <tr><td class="cell">姓名</td><td class="cell">语文</td><td class="cell">数学</td></tr>
+                                        <tr><td class="cell">张三</td><td class="cell">85</td><td class="cell">90</td></tr>
+                                    </table>
+                                </div>
+                                <div style="font-size: 1.5em; color: #1E88E5;">→</div>
+                                <div>
+                                    <div style="font-size: 0.8em; margin-bottom: 5px; color: #666;">转置后（纵向）：</div>
+                                    <table class="excel-table" style="transform: scale(0.8); margin: 0;">
+                                        <tr><td class="cell">姓名</td><td class="cell">张三</td></tr>
+                                        <tr><td class="cell">语文</td><td class="cell">85</td></tr>
+                                        <tr><td class="cell">数学</td><td class="cell">90</td></tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div style="text-align: center; margin-top: 15px; font-family: Consolas; font-size: 0.8em; background: #E3F2FD; padding: 8px; border-radius: 5px;">
+                                {=TRANSPOSE(A1:C2)}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- 第3章：快捷键 -->
+            <section>
+                <section>
+                    <h2>第3章：常用快捷键</h2>
+                    <p>提升操作效率的必备技能</p>
+                </section>
+
+                <section>
+                    <h3>导航与选择</h3>
+                    <div class="two-column">
+                        <div class="left-col">
+                            <table style="font-size: 0.8em;">
+                                <tr><th>快捷键</th><th>功能</th></tr>
+                                <tr><td><span class="key combo">Ctrl</span> + <span class="key">Home</span></td><td>跳到A1单元格</td></tr>
+                                <tr><td><span class="key combo">Ctrl</span> + <span class="key">方向键</span></td><td>跳到数据边界</td></tr>
+                                <tr><td><span class="key combo">Ctrl</span> + <span class="key combo">Shift</span> + <span class="key">方向键</span></td><td>选择到数据边界</td></tr>
+                                <tr><td><span class="key combo">Ctrl</span> + <span class="key">A</span></td><td>全选</td></tr>
+                            </table>
+                        </div>
+                        <div class="right-col">
+                            <div class="shortcut-detail">
+                                <h4>💡 使用技巧</h4>
+                                <p><strong>Ctrl + Home：</strong>无论当前在哪里，一键回到表格开头A1单元格</p>
+                                <p><strong>Ctrl + 方向键：</strong>快速跳转到连续数据的边缘，比滚动鼠标快10倍</p>
+                                <p><strong>Ctrl + Shift + 方向键：</strong>快速选中大片数据，选中后可直接复制、删除或格式化</p>
+                                <div class="tip">提示：选中数据后，按Delete可清空内容，保留格式</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>编辑操作</h3>
+                    <div class="two-column">
+                        <div class="left-col">
+                            <table style="font-size: 0.8em;">
+                                <tr><th>快捷键</th><th>功能</th></tr>
+                                <tr><td><span class="key">F2</span></td><td>编辑单元格</td></tr>
+                                <tr><td><span class="key">F4</span></td><td>切换引用方式</td></tr>
+                                <tr><td><span class="key combo">Ctrl</span> + <span class="key">D</span></td><td>向下填充</td></tr>
+                                <tr><td><span class="key combo">Ctrl</span> + <span class="key">R</span></td><td>向右填充</td></tr>
+                            </table>
+                        </div>
+                        <div class="right-col">
+                            <div class="shortcut-detail">
+                                <h4>💡 使用技巧</h4>
+                                <p><strong>F2：</strong>双击单元格或按F2进入编辑模式，可直接修改内容，比重新输入快</p>
+                                <p><strong>F4：</strong>在公式中切换引用方式：A1 → $A$1 → A$1 → $A1，循环切换</p>
+                                <p><strong>Ctrl + D/R：</strong>选中区域后，将第一个单元格的内容或公式填充到整个区域</p>
+                                <div class="tip">提示：先输入公式，选中区域，按Ctrl+D可批量计算，比拖动填充柄更精准</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>基础操作</h3>
+                    <table>
+                        <tr><th>快捷键</th><th>功能</th></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">S</span></td><td>保存（一定要记得随时保存！）</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">Z</span></td><td>撤销上一步操作</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">Y</span></td><td>恢复上一步操作</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">F</span></td><td>弹出"查找"对话框</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">H</span></td><td>弹出"替换"对话框</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key combo">Shift</span> + <span class="key">+</span></td><td>快速加入行或列</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">-</span></td><td>快速删除当前行</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">A</span></td><td>选中整张工作表</td></tr>
+                        <tr><td><span class="key">Alt</span> + <span class="key">W</span> + <span class="key">F</span> + <span class="key">R</span></td><td>冻结首行（方便后续操作）</td></tr>
+                        <tr><td><span class="key">Alt</span> + <span class="key">=</span></td><td>自动求和</td></tr>
+                        <tr><td><span class="key">Alt</span> + <span class="key">Enter</span></td><td>在单元格内换行</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">;</span></td><td>输入日期</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key combo">Shift</span> + <span class="key">;</span></td><td>输入时间</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">D</span></td><td>向下填充</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">R</span></td><td>向右填充</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">T</span></td><td>创建超级表格（自动筛选、格式化、汇总）</td></tr>
+                    </table>
+                </section>
+
+                <section>
+                    <h3>格式设置</h3>
+                    <table>
+                        <tr><th>快捷键</th><th>功能</th></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">1</span></td><td>弹出"单元格格式"对话框</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">2</span></td><td>加粗字体</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key">3</span></td><td>应用斜体</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key combo">Shift</span> + <span class="key">1</span></td><td>货币格式</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key combo">Shift</span> + <span class="key">2</span></td><td>常规格式</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key combo">Shift</span> + <span class="key">3</span></td><td>日期格式</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key combo">Shift</span> + <span class="key">4</span></td><td>百分比格式</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key combo">Shift</span> + <span class="key">5</span></td><td>科学计数格式</td></tr>
+                        <tr><td><span class="key combo">Ctrl</span> + <span class="key combo">Shift</span> + <span class="key">6</span></td><td>其他格式</td></tr>
+                        <tr><td><span class="key">Alt</span> + <span class="key">O</span> + <span class="key">C</span> + <span class="key">A</span></td><td>自动调整列宽</td></tr>
+                        <tr><td><span class="key">Alt</span> + <span class="key">O</span> + <span class="key">R</span> + <span class="key">A</span></td><td>自动调整行高</td></tr>
+                    </table>
+                </section>
+            </section>
+
+            <!-- 第4章：进阶技巧 -->
+            <section>
+                <section>
+                    <h2>第4章：进阶技巧</h2>
+                    <p>数据处理的高级方法</p>
+                </section>
+
+                <section>
+                    <h3>数据透视表</h3>
+                    <div class="highlight-box">快速汇总、分析大量数据</div>
+                    <ol>
+                        <li class="fragment">选择数据区域</li>
+                        <li class="fragment">插入 → 数据透视表</li>
+                        <li class="fragment">拖拽字段到行/列/值区域</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h3>条件格式</h3>
+                    <p>根据条件自动设置单元格格式</p>
+                    <ul>
+                        <li class="fragment">突出显示单元格规则</li>
+                        <li class="fragment">数据条 / 色阶 / 图标集</li>
+                        <li class="fragment">自定义公式规则</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>数据验证</h3>
+                    <p>限制单元格输入内容</p>
+                    <div class="fragment">
+                        <p>常用验证类型：</p>
+                        <ul>
+                            <li>整数 / 小数</li>
+                            <li>序列（下拉列表）</li>
+                            <li>日期 / 时间</li>
+                            <li>文本长度</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>名称管理器</h3>
+                    <div class="formula-box">定义名称 → 简化公式引用</div>
+                    <p class="fragment">示例：将A1:A10定义为"销售额"</p>
+                    <code class="fragment">=SUM(销售额)</code>
+                </section>
+            </section>
+
+            <!-- 第5章：实战练习 -->
+            <section>
+                <section>
+                    <h2>第5章：实战练习</h2>
+                    <p>通过实际案例巩固所学知识</p>
+                </section>
+
+                <section>
+                    <h3>基础练习</h3>
+                    <div class="exercise-card">
+                        <h3>练习1：员工工资核算 <span class="difficulty basic">基础</span></h3>
+                        <p>学习IF、VLOOKUP、数组公式 | 时长：20分钟</p>
+                        <a href="exercises/basic/exercise-01-salary/员工工资表-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                    </div>
+                    <div class="exercise-card">
+                        <h3>练习2：销售数据统计 <span class="difficulty basic">基础</span></h3>
+                        <p>学习数据透视表、SUMIF/COUNTIF | 时长：15分钟</p>
+                        <a href="exercises/basic/exercise-02-sales/销售数据-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>基础练习（续）</h3>
+                    <div class="exercise-card">
+                        <h3>练习3：库存管理表 <span class="difficulty basic">基础</span></h3>
+                        <p>学习SUMIF、VLOOKUP、条件格式 | 时长：15分钟</p>
+                        <a href="exercises/basic/exercise-03-inventory/库存管理-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                    </div>
+                    <div class="exercise-card">
+                        <h3>练习4：个人理财记账 <span class="difficulty basic">基础</span></h3>
+                        <p>学习数据验证、SUMIF、图表 | 时长：15分钟</p>
+                        <a href="exercises/basic/exercise-04-finance/理财记账-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>高级练习</h3>
+                    <div class="exercise-card">
+                        <h3>练习5：动态销售仪表板 <span class="difficulty advanced">高级</span></h3>
+                        <p>学习INDEX+MATCH、动态图表、切片器 | 时长：25分钟</p>
+                        <a href="exercises/advanced/exercise-05-dashboard/销售仪表板-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                    </div>
+                    <div class="exercise-card">
+                        <h3>练习6：财务多维度分析 <span class="difficulty advanced">高级</span></h3>
+                        <p>学习SUMPRODUCT、复杂数组公式 | 时长：25分钟</p>
+                        <a href="exercises/advanced/exercise-06-analysis/财务分析-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>高级练习（续）</h3>
+                    <div class="exercise-card">
+                        <h3>练习7：自动化报表生成 <span class="difficulty advanced">高级</span></h3>
+                        <p>学习名称管理器、INDIRECT、模板设计 | 时长：30分钟</p>
+                        <a href="exercises/advanced/exercise-07-automation/自动报表-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                    </div>
+                </section>
+            </section>
+
+            <!-- 结束页 -->
+            <section>
+                <h2>感谢参与培训！</h2>
+                <h3>继续练习，熟能生巧</h3>
+                <p><small>所有练习文件可在第5章下载</small></p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="lib/reveal.js/reveal.js"></script>
+    <script src="lib/highlight.js/highlight.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide'
+        });
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

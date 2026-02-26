@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WPS表格培训教程</title>
+    <link rel="stylesheet" href="lib/reveal.js/reveal.css">
+    <link rel="stylesheet" href="lib/reveal.js/white.css">
+    <link rel="stylesheet" href="lib/highlight.js/default.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- 封面 -->
+            <section>
+                <h1>WPS表格培训教程</h1>
+                <h3>从入门到精通</h3>
+                <p><small>掌握公式、数组、快捷键与实战技巧</small></p>
+            </section>
+
+            <!-- 目录 -->
+            <section>
+                <h2>课程目录</h2>
+                <ol>
+                    <li class="fragment">常用公式讲解</li>
+                    <li class="fragment">数组应用</li>
+                    <li class="fragment">常用快捷键</li>
+                    <li class="fragment">进阶技巧</li>
+                    <li class="fragment">实战练习</li>
+                </ol>
+            </section>
+
+            <!-- 第1章：常用公式 -->
+            <section>
+                <h2>第1章：常用公式讲解</h2>
+                <p>掌握WPS表格中最实用的函数</p>
+            </section>
+
+            <section>
+                <h3>SUM函数 - 求和计算</h3>
+                    <div class="formula-box">=SUM(A2:A5)</div>
+                    
+                    <div class="formula-animation" id="sum-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <table class="excel-table">
+                                    <tr><th class="row-header"></th><th class="col-header">A</th><th class="col-header">B</th></tr>
+                                    <tr><td class="row-header">1</td><td class="cell header">成绩</td><td class="cell"></td></tr>
+                                    <tr><td class="row-header">2</td><td class="cell highlight-yellow">85</td><td class="cell"></td></tr>
+                                    <tr><td class="row-header">3</td><td class="cell highlight-yellow">92</td><td class="cell"></td></tr>
+                                    <tr><td class="row-header">4</td><td class="cell highlight-yellow">78</td><td class="cell"></td></tr>
+                                    <tr><td class="row-header">5</td><td class="cell highlight-yellow">96</td><td class="cell"></td></tr>
+                                </table>
+                            </div>
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="sum-process">
+                                        <span class="number">85</span><span class="operator">+</span><span class="number">92</span><span class="operator">+</span><span class="number">78</span><span class="operator">+</span><span class="number">96</span><span class="operator">=</span><span class="result">351</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            <div class="fragment result" data-fragment-index="4">
+                                <div class="final-result">总和 = <strong>351</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="5">💡 原理：将指定范围内的所有数值相加</p>
+                </section>
+
+                <section>
+                    <h3>AVERAGE函数 - 平均值计算</h3>
+                    <div class="formula-box">=AVERAGE(B2:B6)</div>
+                    
+                    <div class="formula-animation" id="average-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <table class="excel-table">
+                                    <tr><th class="row-header"></th><th class="col-header">A</th><th class="col-header">B</th></tr>
+                                    <tr><td class="row-header">1</td><td class="cell">姓名</td><td class="cell header">成绩</td></tr>
+                                    <tr><td class="row-header">2</td><td class="cell">张三</td><td class="cell highlight-yellow">80</td></tr>
+                                    <tr><td class="row-header">3</td><td class="cell">李四</td><td class="cell highlight-yellow">90</td></tr>
+                                    <tr><td class="row-header">4</td><td class="cell">王五</td><td class="cell highlight-yellow">85</td></tr>
+                                    <tr><td class="row-header">5</td><td class="cell">赵六</td><td class="cell highlight-yellow">95</td></tr>
+                                    <tr><td class="row-header">6</td><td class="cell">钱七</td><td class="cell highlight-yellow">88</td></tr>
+                                </table>
+                            </div>
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="average-process">
+                                        <div class="step"><span class="label">总和：</span><span class="calc">80+90+85+95+88=</span><span class="result">438</span></div>
+                                        <div class="step"><span class="label">个数：</span><span class="calc">5个</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            <div class="fragment" data-fragment-index="4">
+                                <div class="calc-step">
+                                    平均值 = 438 ÷ 5 = <strong>87.6</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="5">💡 原理：总和 ÷ 数据个数</p>
+                </section>
+
+                <section>
+                    <h3>MAX/MIN函数 - 最大最小值</h3>
+                    <div class="formula-box">=MAX(C2:C6) | =MIN(C2:C6)</div>
+                    
+                    <div class="formula-animation" id="maxmin-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <table class="excel-table">
+                                    <tr><th class="row-header"></th><th class="col-header">A</th><th class="col-header">B</th><th class="col-header">C</th></tr>
+                                    <tr><td class="row-header">1</td><td class="cell">姓名</td><td class="cell">部门</td><td class="cell header">成绩</td></tr>
+                                    <tr><td class="row-header">2</td><td class="cell">张三</td><td class="cell">技术</td><td class="cell">65</td></tr>
+                                    <tr><td class="row-header">3</td><td class="cell">李四</td><td class="cell">销售</td><td class="cell highlight-green">92</td></tr>
+                                    <tr><td class="row-header">4</td><td class="cell">王五</td><td class="cell">人事</td><td class="cell">78</td></tr>
+                                    <tr><td class="row-header">5</td><td class="cell">赵六</td><td class="cell">财务</td><td class="cell">88</td></tr>
+                                    <tr><td class="row-header">6</td><td class="cell">钱七</td><td class="cell">技术</td><td class="cell highlight-red">95</td></tr>
+                                </table>
+                            </div>
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="maxmin-result">
+                                        <div class="max-line"><span class="label">MAX：</span><span class="comparison">65→92→78→88→<strong class="highlight-red">95</strong></span></div>
+                                        <div class="min-line"><span class="label">MIN：</span><span class="comparison"><strong class="highlight-blue">65</strong>←92←78←88←95</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            <div class="fragment result" data-fragment-index="4">
+                                <div class="final-result"><div>MAX=<strong>95</strong></div><div>MIN=<strong>65</strong></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="5">💡 原理：遍历比较所有数值，找出最大/最小值</p>
+                </section>
+
+                <section>
+                    <h3>IF函数 - 逻辑判断</h3>
+                    <div class="formula-box">=IF(条件, 真值, 假值)</div>
+                    
+                    <div class="formula-animation" id="if-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <table class="excel-table">
+                                    <tr><th class="row-header"></th><th class="col-header">A</th><th class="col-header">B</th><th class="col-header">C</th></tr>
+                                    <tr><td class="row-header">1</td><td class="cell header">姓名</td><td class="cell header">成绩</td><td class="cell header">结果</td></tr>
+                                    <tr><td class="row-header">2</td><td class="cell">张三</td><td class="cell highlight-yellow">85</td><td class="cell">?</td></tr>
+                                </table>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="condition-check">
+                                        <span class="condition">条件：成绩 ≥ 60</span>
+                                        <span class="arrow">→</span>
+                                        <span class="check-result pass">85 ≥ 60 ✓</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="4">
+                                <div class="calc-step">
+                                    <div class="branch-flow">
+                                        <div class="branch true-branch">
+                                            <span class="branch-label">条件为真</span>
+                                            <span class="arrow">→</span>
+                                            <span class="result">返回"及格"</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="5">↓</div>
+                            
+                            <div class="fragment result" data-fragment-index="6">
+                                <div class="final-result">
+                                    结果：<strong class="highlight-green">及格</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="7">💡 原理：先判断条件，条件为真返回第2个参数，为假返回第3个参数</p>
+                </section>
+
+                <section>
+                    <h3>IF函数 - 嵌套应用</h3>
+                    <div class="formula-box">
+                        =IF(B2>=90,"优秀",IF(B2>=80,"良好",IF(B2>=60,"及格","不及格")))
+                    </div>
+                    
+                    <div class="formula-animation" id="if-nested-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <div class="scenario-box">
+                                    <h4>场景：成绩等级评定</h4>
+                                    <div class="excel-row">
+                                        <span class="excel-cell">成绩：78</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="nested-level">
+                                        <span class="level">第1层</span>
+                                        <span class="condition">78 ≥ 90?</span>
+                                        <span class="result">否</span>
+                                        <span class="arrow">→</span>
+                                        <span class="next">进入第2层</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="4">
+                                <div class="calc-step">
+                                    <div class="nested-level">
+                                        <span class="level">第2层</span>
+                                        <span class="condition">78 ≥ 80?</span>
+                                        <span class="result">否</span>
+                                        <span class="arrow">→</span>
+                                        <span class="next">进入第3层</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="5">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="6">
+                                <div class="calc-step">
+                                    <div class="nested-level">
+                                        <span class="level">第3层</span>
+                                        <span class="condition">78 ≥ 60?</span>
+                                        <span class="result highlight-green">是 ✓</span>
+                                        <span class="arrow">→</span>
+                                        <span class="final">返回"及格"</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment result" data-fragment-index="7">
+                                <div class="final-result">
+                                    等级评定：<strong class="highlight-green">及格</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="8">💡 原理：多层判断，逐层筛选，直到满足条件</p>
+                </section>
+
+                <section>
+                    <h3>VLOOKUP函数 - 垂直查找</h3>
+                    <div class="formula-box">
+                        =VLOOKUP(查找值, 区域, 列号, 精确匹配)
+                    </div>
+                    
+                    <div class="formula-animation" id="vlookup-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <table class="excel-table">
+                                    <tr>
+                                        <th class="row-header"></th>
+                                        <th class="col-header">A</th>
+                                        <th class="col-header">B</th>
+                                        <th class="col-header">C</th>
+                                        <th class="col-header">D</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-header">1</td>
+                                        <td class="cell header">员工编号</td>
+                                        <td class="cell header">姓名</td>
+                                        <td class="cell header">部门</td>
+                                        <td class="cell header">工资</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-header">2</td>
+                                        <td class="cell">A001</td>
+                                        <td class="cell">张三</td>
+                                        <td class="cell">技术部</td>
+                                        <td class="cell">8000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-header">3</td>
+                                        <td class="cell highlight-yellow">A002</td>
+                                        <td class="cell highlight-green">李四</td>
+                                        <td class="cell">销售部</td>
+                                        <td class="cell">7500</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-header">4</td>
+                                        <td class="cell">A003</td>
+                                        <td class="cell">王五</td>
+                                        <td class="cell">人事部</td>
+                                        <td class="cell">6500</td>
+                                    </tr>
+                                </table>
+                            </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="vlookup-params">
+                                        <div class="param">
+                                            <span class="param-name">查找值：</span>
+                                            <span class="param-value">"A002"</span>
+                                        </div>
+                                        <div class="param">
+                                            <span class="param-name">查找区域：</span>
+                                            <span class="param-value">A1:D4</span>
+                                        </div>
+                                        <div class="param">
+                                            <span class="param-name">返回列号：</span>
+                                            <span class="param-value">2 (第2列-姓名)</span>
+                                        </div>
+                                        <div class="param">
+                                            <span class="param-name">精确匹配：</span>
+                                            <span class="param-value">FALSE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="4">
+                                <div class="calc-step">
+                                    <div class="search-process">
+                                        <div class="step">1. 在第1列查找 "A002"</div>
+                                        <div class="step">2. 找到匹配行 → 第3行</div>
+                                        <div class="step">3. 返回第2列的值 → "李四"</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment result" data-fragment-index="5">
+                                <div class="final-result">
+                                    查询结果：<strong class="highlight-green">李四</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="6">💡 原理：在首列查找匹配值，返回指定列的对应数据</p>
+                </section>
+
+                <section>
+                    <h3>VLOOKUP函数 - 参数详解</h3>
+                    <div class="formula-box">
+                        =VLOOKUP(查找值, 区域, 列号, 精确匹配)
+                    </div>
+                    <table>
+                        <tr>
+                            <th>参数</th>
+                            <th>说明</th>
+                            <th>示例</th>
+                        </tr>
+                        <tr>
+                            <td>查找值</td>
+                            <td>要查找的内容</td>
+                            <td>A2, "张三", 1001</td>
+                        </tr>
+                        <tr>
+                            <td>区域</td>
+                            <td>查找的数据范围</td>
+                            <td>A1:D10, 员工表!A:D</td>
+                        </tr>
+                        <tr>
+                            <td>列号</td>
+                            <td>返回第几列的值</td>
+                            <td>2=第2列, 3=第3列</td>
+                        </tr>
+                        <tr>
+                            <td>精确匹配</td>
+                            <td>FALSE=精确, TRUE=近似</td>
+                            <td>FALSE, 0</td>
+                        </tr>
+                    </table>
+                    <div class="highlight-box fragment">
+                        ⚠️ 注意：查找值必须在区域的第一列！
+                    </div>
+                </section>
+
+                <section>
+                    <h3>IFS函数 - 多条件判断</h3>
+                    <div class="formula-box">=IFS(条件1, 值1, 条件2, 值2, ...)</div>
+                    
+                    <div class="formula-animation" id="ifs-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <table class="excel-table">
+                                    <tr><th class="row-header"></th><th class="col-header">A</th><th class="col-header">B</th><th class="col-header">C</th></tr>
+                                    <tr><td class="row-header">1</td><td class="cell header">姓名</td><td class="cell header">成绩</td><td class="cell header">等级</td></tr>
+                                    <tr><td class="row-header">2</td><td class="cell">张三</td><td class="cell highlight-yellow">85</td><td class="cell">?</td></tr>
+                                </table>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="ifs-formula">=IFS(B2>=90,"优秀",B2>=80,"良好",B2>=60,"及格",B2<60,"不及格")</div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="4">
+                                <div class="calc-step">
+                                    <div class="ifs-process">
+                                        <div class="ifs-check"><span class="condition">B2>=90?</span><span class="result">85>=90 ✗</span></div>
+                                        <div class="ifs-check"><span class="condition">B2>=80?</span><span class="result pass">85>=80 ✓</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment result" data-fragment-index="5">
+                                <div class="final-result">结果：<strong class="highlight-green">"良好"</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="6">💡 原理：依次判断条件，返回第一个满足条件的值</p>
+                </section>
+
+                <section>
+                    <h3>SUMIFS函数 - 多条件求和</h3>
+                    <div class="formula-box">=SUMIFS(求和区域, 条件区域1, 条件1, 条件区域2, 条件2, ...)</div>
+                    
+                    <div class="formula-animation" id="sumifs-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <table class="excel-table">
+                                    <tr><th class="row-header"></th><th class="col-header">A</th><th class="col-header">B</th><th class="col-header">C</th></tr>
+                                    <tr><td class="row-header">1</td><td class="cell header">部门</td><td class="cell header">月份</td><td class="cell header">销售额</td></tr>
+                                    <tr><td class="row-header">2</td><td class="cell">技术</td><td class="cell">1月</td><td class="cell">5000</td></tr>
+                                    <tr><td class="row-header">3</td><td class="cell highlight-green">销售</td><td class="cell">1月</td><td class="cell highlight-yellow">8000</td></tr>
+                                    <tr><td class="row-header">4</td><td class="cell highlight-green">销售</td><td class="cell">2月</td><td class="cell">6000</td></tr>
+                                    <tr><td class="row-header">5</td><td class="cell">技术</td><td class="cell">2月</td><td class="cell">7000</td></tr>
+                                </table>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="sumifs-formula">=SUMIFS(C2:C5,A2:A5,"销售",B2:B5,"1月")</div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="4">
+                                <div class="calc-step">
+                                    <div class="sumifs-process">
+                                        <div class="filter-step"><span class="label">条件1：部门="销售"</span><span class="arrow">→</span><span class="result">第3、4行</span></div>
+                                        <div class="filter-step"><span class="label">条件2：月份="1月"</span><span class="arrow">→</span><span class="result">第3行</span></div>
+                                        <div class="sum-step"><span class="label">求和：</span><span class="value">8000</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment result" data-fragment-index="5">
+                                <div class="final-result">销售部1月销售额：<strong>8000</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="6">💡 原理：根据多个条件筛选数据后求和</p>
+                </section>
+
+                <section>
+                    <h3>COUNTIFS函数 - 多条件计数</h3>
+                    <div class="formula-box">=COUNTIFS(条件区域1, 条件1, 条件区域2, 条件2, ...)</div>
+                    
+                    <div class="formula-animation" id="countifs-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <table class="excel-table">
+                                    <tr><th class="row-header"></th><th class="col-header">A</th><th class="col-header">B</th><th class="col-header">C</th></tr>
+                                    <tr><td class="row-header">1</td><td class="cell header">部门</td><td class="cell header">业绩</td><td class="cell header">状态</td></tr>
+                                    <tr><td class="row-header">2</td><td class="cell highlight-green">销售</td><td class="cell highlight-yellow">120</td><td class="cell">达标</td></tr>
+                                    <tr><td class="row-header">3</td><td class="cell">技术</td><td class="cell">80</td><td class="cell">未达标</td></tr>
+                                    <tr><td class="row-header">4</td><td class="cell highlight-green">销售</td><td class="cell">90</td><td class="cell">未达标</td></tr>
+                                    <tr><td class="row-header">5</td><td class="cell highlight-green">销售</td><td class="cell highlight-yellow">150</td><td class="cell">达标</td></tr>
+                                </table>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="countifs-formula">=COUNTIFS(A2:A5,"销售",B2:B5,">100")</div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="4">
+                                <div class="calc-step">
+                                    <div class="countifs-process">
+                                        <div class="filter-step"><span class="label">条件1：部门="销售"</span><span class="arrow">→</span><span class="result">第2、4、5行</span></div>
+                                        <div class="filter-step"><span class="label">条件2：业绩>100</span><span class="arrow">→</span><span class="result">第2、5行</span></div>
+                                        <div class="count-step"><span class="label">计数：</span><span class="value">2人</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment result" data-fragment-index="5">
+                                <div class="final-result">销售部业绩超100的人数：<strong>2</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="6">💡 原理：根据多个条件筛选后统计记录数</p>
+                </section>
+
+                <section>
+                    <h3>LEFT/RIGHT函数 - 文本截取</h3>
+                    <div class="formula-box">=LEFT(文本, 字符数) | =RIGHT(文本, 字符数)</div>
+                    
+                    <div class="formula-animation" id="leftright-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <table class="excel-table">
+                                    <tr><th class="row-header"></th><th class="col-header">A</th></tr>
+                                    <tr><td class="row-header">1</td><td class="cell header">身份证号</td></tr>
+                                    <tr><td class="row-header">2</td><td class="cell highlight-yellow">110101199001011234</td></tr>
+                                </table>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="text-extract-demo">
+                                        <div class="extract-line">
+                                            <span class="formula">=LEFT(A2,6)</span><span class="arrow">→</span><span class="text-show"><span class="highlight-green">110101</span><span class="dim">199001011234</span></span><span class="arrow">→</span><span class="result">"110101"</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="4">
+                                <div class="calc-step">
+                                    <div class="text-extract-demo">
+                                        <div class="extract-line">
+                                            <span class="formula">=RIGHT(A2,4)</span><span class="arrow">→</span><span class="text-show"><span class="dim">11010119900101</span><span class="highlight-red">1234</span></span><span class="arrow">→</span><span class="result">"1234"</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="5">💡 原理：LEFT从左取N个字符，RIGHT从右取N个字符</p>
+                </section>
+
+                <section>
+                    <h3>MID函数 - 中间截取</h3>
+                    <div class="formula-box">=MID(文本, 起始位置, 字符数)</div>
+                    
+                    <div class="formula-animation" id="mid-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <table class="excel-table">
+                                    <tr><th class="row-header"></th><th class="col-header">A</th></tr>
+                                    <tr><td class="row-header">1</td><td class="cell header">身份证号</td></tr>
+                                    <tr><td class="row-header">2</td><td class="cell highlight-yellow">110101199001011234</td></tr>
+                                </table>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="mid-params">
+                                        <div class="param"><span class="param-name">公式：</span><span class="param-value">=MID(A2,7,8)</span></div>
+                                        <div class="param"><span class="param-name">起始：</span><span class="param-value">第7位</span></div>
+                                        <div class="param"><span class="param-name">长度：</span><span class="param-value">8个字符</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="4">
+                                <div class="calc-step">
+                                    <div class="text-show"><span class="dim">110101</span><span class="highlight-blue">19900101</span><span class="dim">1234</span></div>
+                                    <div class="char-index">位置:1-6 <span class="highlight">7-14</span> 15-18</div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment result" data-fragment-index="5">
+                                <div class="final-result">结果：<strong class="highlight-green">"19900101"</strong>(1990年01月01日)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="6">💡 原理：从指定位置开始，截取指定长度的字符</p>
+                </section>
+
+                <section>
+                    <h3>CONCAT函数 - 文本连接</h3>
+                    <div class="formula-box">=CONCAT(文本1, 文本2, ...)</div>
+                    
+                    <div class="formula-animation" id="concat-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <table class="excel-table">
+                                    <tr><th class="row-header"></th><th class="col-header">A</th><th class="col-header">B</th></tr>
+                                    <tr><td class="row-header">1</td><td class="cell header">姓名</td><td class="cell header">部门</td></tr>
+                                    <tr><td class="row-header">2</td><td class="cell">张三</td><td class="cell">技术部</td></tr>
+                                </table>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step"><div class="concat-formula">=CONCAT(A2,"-",B2)</div></div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="4">
+                                <div class="calc-step">
+                                    <div class="concat-process">
+                                        <div class="concat-item"><span class="source">A2</span><span class="arrow">→</span><span class="value">"张三"</span></div>
+                                        <div class="concat-item"><span class="source">"-"</span><span class="arrow">→</span><span class="value">"-"</span></div>
+                                        <div class="concat-item"><span class="source">B2</span><span class="arrow">→</span><span class="value">"技术部"</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="5">↓</div>
+                            
+                            <div class="fragment result" data-fragment-index="6">
+                                <div class="final-result">
+                                    合并结果：<strong class="highlight-green">"张三-技术部"</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="7">💡 原理：将多个文本字符串连接成一个</p>
+                </section>
+
+                <section>
+                    <h3>TODAY/NOW函数 - 当前日期时间</h3>
+                    <div class="formula-box">
+                        =TODAY() | =NOW()
+                    </div>
+                    
+                    <div class="formula-animation" id="today-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <div class="scenario-box">
+                                    <h4>自动获取系统当前日期和时间</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="date-function-comparison">
+                                        <div class="func-box">
+                                            <div class="func-name">=TODAY()</div>
+                                            <div class="func-result">2024-02-24</div>
+                                            <div class="func-desc">只返回日期</div>
+                                        </div>
+                                        <div class="vs">VS</div>
+                                        <div class="func-box">
+                                            <div class="func-name">=NOW()</div>
+                                            <div class="func-result">2024-02-24 15:30</div>
+                                            <div class="func-desc">返回日期+时间</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            
+                            <div class="fragment result" data-fragment-index="4">
+                                <div class="final-result">
+                                    💡 每次打开文件或重新计算时自动更新
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="5">应用场景：自动记录操作时间、计算年龄、计算到期日</p>
+                </section>
+
+                <section>
+                    <h3>YEAR/MONTH/DAY函数 - 提取日期</h3>
+                    <div class="formula-box">
+                        =YEAR(日期) | =MONTH(日期) | =DAY(日期)
+                    </div>
+                    
+                    <div class="formula-animation" id="ymd-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <div class="scenario-box">
+                                    <h4>场景：从完整日期中提取年月日</h4>
+                                    <div class="excel-row">
+                                        <span class="excel-cell highlight-yellow">2024-02-24</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="extract-process">
+                                        <div class="extract-item">
+                                            <span class="formula">=YEAR(A1)</span>
+                                            <span class="arrow">→</span>
+                                            <span class="result highlight-red">2024</span>
+                                            <span class="label">年</span>
+                                        </div>
+                                        <div class="extract-item">
+                                            <span class="formula">=MONTH(A1)</span>
+                                            <span class="arrow">→</span>
+                                            <span class="result highlight-green">2</span>
+                                            <span class="label">月</span>
+                                        </div>
+                                        <div class="extract-item">
+                                            <span class="formula">=DAY(A1)</span>
+                                            <span class="arrow">→</span>
+                                            <span class="result highlight-blue">24</span>
+                                            <span class="label">日</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="3">💡 原理：从日期值中提取对应的年、月、日部分</p>
+                </section>
+
+                <section>
+                    <h3>DATEDIF函数 - 计算日期差</h3>
+                    <div class="formula-box">
+                        =DATEDIF(开始日期, 结束日期, 单位)
+                    </div>
+                    
+                    <div class="formula-animation" id="datedif-demo">
+                        <div class="calculation-flow">
+                            <div class="fragment" data-fragment-index="0">
+                                <div class="scenario-box">
+                                    <h4>场景：计算员工工龄</h4>
+                                    <div class="excel-row">
+                                        <span class="excel-cell">入职：2020-03-15</span>
+                                        <span class="excel-cell">今天：2024-02-24</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="1">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="2">
+                                <div class="calc-step">
+                                    <div class="datedif-params">
+                                        <div class="param-row">
+                                            <span class="param">=DATEDIF("2020-03-15", "2024-02-24",</span>
+                                            <span class="unit-options">
+                                                <span class="unit">"Y"</span>
+                                                <span class="unit-desc">年</span>
+                                            </span>
+                                            <span class="param">)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment arrow" data-fragment-index="3">↓</div>
+                            
+                            <div class="fragment" data-fragment-index="4">
+                                <div class="calc-step">
+                                    <div class="unit-table">
+                                        <table>
+                                            <tr>
+                                                <th>单位</th>
+                                                <th>含义</th>
+                                                <th>结果</th>
+                                            </tr>
+                                            <tr>
+                                                <td>"Y"</td>
+                                                <td>完整年数</td>
+                                                <td>3年</td>
+                                            </tr>
+                                            <tr>
+                                                <td>"M"</td>
+                                                <td>完整月数</td>
+                                                <td>47月</td>
+                                            </tr>
+                                            <tr>
+                                                <td>"D"</td>
+                                                <td>天数</td>
+                                                <td>1442天</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fragment result" data-fragment-index="5">
+                                <div class="final-result">
+                                    工龄：
+                                    <strong class="highlight-green">3年11个月</strong>
+                                    (=DATEDIF(A1,TODAY(),"Y")&"年"&DATEDIF(A1,TODAY(),"YM")&"个月")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fragment" data-fragment-index="6">💡 原理：计算两个日期之间的时间差，单位可以是年、月、日</p>
+                </section>
+
+            <!-- 第2章：数组 -->
+            <section>
+                <h2>第2章：数组应用</h2>
+                <p>一次性处理多组数据</p>
+            </section>
+
+            <section>
+                <h3>什么是数组公式</h3>
+                <div class="highlight-box">
+                    数组公式可以对一组或多组值执行计算，返回单个或多个结果
+                </div>
+                <p class="fragment">输入数组公式后按 <span class="key combo">Ctrl</span> + <span class="key combo">Shift</span> + <span class="key combo">Enter</span></p>
+            </section>
+
+            <section>
+                <h3>SUMPRODUCT 函数</h3>
+                <div class="formula-box">
+                    =SUMPRODUCT(数组1, 数组2, ...)
+                </div>
+                <p>先乘积，再求和</p>
+                <div class="fragment">
+                    <p>示例：计算总销售额</p>
+                    <code>=SUMPRODUCT(数量列, 单价列)</code>
+                </div>
+            </section>
+
+            <section>
+                <h3>TRANSPOSE 函数</h3>
+                <div class="formula-box">
+                    =TRANSPOSE(数组)
+                </div>
+                <p class="fragment">转置数组：行变列，列变行</p>
+            </section>
+
+            <!-- 第3章：快捷键 -->
+            <section>
+                <h2>第3章：常用快捷键</h2>
+                <p>提升操作效率的必备技能</p>
+            </section>
+
+            <section>
+                <h3>导航与选择</h3>
+                <table>
+                    <tr>
+                        <th>快捷键</th>
+                        <th>功能</th>
+                    </tr>
+                    <tr>
+                        <td><span class="key combo">Ctrl</span> + <span class="key">Home</span></td>
+                        <td>跳到A1单元格</td>
+                    </tr>
+                    <tr>
+                        <td><span class="key combo">Ctrl</span> + <span class="key">方向键</span></td>
+                        <td>跳到数据边界</td>
+                    </tr>
+                    <tr>
+                        <td><span class="key combo">Ctrl</span> + <span class="key combo">Shift</span> + <span class="key">方向键</span></td>
+                        <td>选择到数据边界</td>
+                    </tr>
+                    <tr>
+                        <td><span class="key combo">Ctrl</span> + <span class="key">A</span></td>
+                        <td>全选</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h3>编辑操作</h3>
+                <table>
+                    <tr>
+                        <th>快捷键</th>
+                        <th>功能</th>
+                    </tr>
+                    <tr>
+                        <td><span class="key">F2</span></td>
+                        <td>编辑单元格</td>
+                    </tr>
+                    <tr>
+                        <td><span class="key">F4</span></td>
+                        <td>切换引用方式</td>
+                    </tr>
+                    <tr>
+                        <td><span class="key combo">Ctrl</span> + <span class="key">D</span></td>
+                        <td>向下填充</td>
+                    </tr>
+                    <tr>
+                        <td><span class="key combo">Ctrl</span> + <span class="key">R</span></td>
+                        <td>向右填充</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h3>格式化快捷键</h3>
+                <table>
+                    <tr>
+                        <th>快捷键</th>
+                        <th>功能</th>
+                    </tr>
+                    <tr>
+                        <td><span class="key combo">Ctrl</span> + <span class="key">B</span></td>
+                        <td>加粗</td>
+                    </tr>
+                    <tr>
+                        <td><span class="key combo">Ctrl</span> + <span class="key">I</span></td>
+                        <td>斜体</td>
+                    </tr>
+                    <tr>
+                        <td><span class="key combo">Ctrl</span> + <span class="key">U</span></td>
+                        <td>下划线</td>
+                    </tr>
+                    <tr>
+                        <td><span class="key combo">Ctrl</span> + <span class="key">1</span></td>
+                        <td>单元格格式</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- 第4章：进阶技巧 -->
+            <section>
+                <h2>第4章：进阶技巧</h2>
+                <p>数据处理的高级方法</p>
+            </section>
+
+            <section>
+                <h3>数据透视表</h3>
+                <div class="highlight-box">
+                    快速汇总、分析大量数据
+                </div>
+                <ol>
+                    <li class="fragment">选择数据区域</li>
+                    <li class="fragment">插入 → 数据透视表</li>
+                    <li class="fragment">拖拽字段到行/列/值区域</li>
+                </ol>
+            </section>
+
+            <section>
+                <h3>条件格式</h3>
+                <p>根据条件自动设置单元格格式</p>
+                <ul>
+                    <li class="fragment">突出显示单元格规则</li>
+                    <li class="fragment">数据条 / 色阶 / 图标集</li>
+                    <li class="fragment">自定义公式规则</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>数据验证</h3>
+                <p>限制单元格输入内容</p>
+                <div class="fragment">
+                    <p>常用验证类型：</p>
+                    <ul>
+                        <li>整数 / 小数</li>
+                        <li>序列（下拉列表）</li>
+                        <li>日期 / 时间</li>
+                        <li>文本长度</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3>名称管理器</h3>
+                <div class="formula-box">
+                    定义名称 → 简化公式引用
+                </div>
+                <p class="fragment">示例：将A1:A10定义为"销售额"</p>
+                <code class="fragment">=SUM(销售额)</code>
+            </section>
+
+            <!-- 第5章：实战练习 -->
+            <section>
+                <h2>第5章：实战练习</h2>
+                <p>通过实际案例巩固所学知识</p>
+            </section>
+
+            <section>
+                <h3>基础练习</h3>
+                
+                <div class="exercise-card">
+                    <h3>练习1：员工工资核算 <span class="difficulty basic">基础</span></h3>
+                    <p>学习IF、VLOOKUP、数组公式</p>
+                    <p>时长：20分钟</p>
+                    <a href="exercises/basic/exercise-01-salary/员工工资表-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                </div>
+
+                <div class="exercise-card">
+                    <h3>练习2：销售数据统计 <span class="difficulty basic">基础</span></h3>
+                    <p>学习数据透视表、SUMIF/COUNTIF</p>
+                    <p>时长：15分钟</p>
+                    <a href="exercises/basic/exercise-02-sales/销售数据-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                </div>
+            </section>
+
+            <section>
+                <h3>基础练习（续）</h3>
+
+                <div class="exercise-card">
+                    <h3>练习3：库存管理表 <span class="difficulty basic">基础</span></h3>
+                    <p>学习SUMIF、VLOOKUP、条件格式</p>
+                    <p>时长：15分钟</p>
+                    <a href="exercises/basic/exercise-03-inventory/库存管理-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                </div>
+
+                <div class="exercise-card">
+                    <h3>练习4：个人理财记账 <span class="difficulty basic">基础</span></h3>
+                    <p>学习数据验证、SUMIF、图表</p>
+                    <p>时长：15分钟</p>
+                    <a href="exercises/basic/exercise-04-finance/理财记账-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                </div>
+            </section>
+
+            <section>
+                <h3>高级练习</h3>
+
+                <div class="exercise-card">
+                    <h3>练习5：动态销售仪表板 <span class="difficulty advanced">高级</span></h3>
+                    <p>学习INDEX+MATCH、动态图表、切片器</p>
+                    <p>时长：25分钟</p>
+                    <a href="exercises/advanced/exercise-05-dashboard/销售仪表板-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                </div>
+
+                <div class="exercise-card">
+                    <h3>练习6：财务多维度分析 <span class="difficulty advanced">高级</span></h3>
+                    <p>学习SUMPRODUCT、复杂数组公式</p>
+                    <p>时长：25分钟</p>
+                    <a href="exercises/advanced/exercise-06-analysis/财务分析-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                </div>
+            </section>
+
+            <section>
+                <h3>高级练习（续）</h3>
+
+                <div class="exercise-card">
+                    <h3>练习7：自动化报表生成 <span class="difficulty advanced">高级</span></h3>
+                    <p>学习名称管理器、INDIRECT、模板设计</p>
+                    <p>时长：30分钟</p>
+                    <a href="exercises/advanced/exercise-07-automation/自动报表-空白.xlsx" class="download-btn" download>下载练习文件</a>
+                </div>
+            </section>
+
+            <!-- 结束页 -->
+            <section>
+                <h2>感谢参与培训！</h2>
+                <h3>继续练习，熟能生巧</h3>
+                <p><small>所有练习文件可在第5章下载</small></p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="lib/reveal.js/reveal.js"></script>
+    <script src="lib/highlight.js/highlight.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide'
+        });
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

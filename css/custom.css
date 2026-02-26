@@ -1,0 +1,1183 @@
+/* WPS Excel Training - Custom Styles */
+/* White Theme Customization */
+
+:root {
+  --primary-color: #1E88E5;
+  --accent-color: #FF6B35;
+  --bg-color: #FFFFFF;
+  --text-color: #333333;
+  --code-bg: #F5F5F5;
+  --code-color: #4CAF50;
+  --border-color: #E0E0E0;
+}
+
+/* Base styles - Optimized for 1920x1080 */
+.reveal {
+  font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  font-size: 32px;
+  color: var(--text-color);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+  margin: 0.3em 0;
+}
+
+.reveal h1 { font-size: 2em; }
+.reveal h2 { font-size: 1.5em; }
+.reveal h3 { font-size: 1.2em; }
+
+.reveal p {
+  margin: 0.3em 0;
+  line-height: 1.4;
+}
+
+.reveal ul, .reveal ol {
+  margin: 0.3em 0;
+}
+
+.reveal li {
+  margin: 0.2em 0;
+  line-height: 1.4;
+}
+
+/* Code styling */
+.reveal code {
+  font-family: 'Consolas', 'Monaco', monospace;
+  background-color: var(--code-bg);
+  color: var(--code-color);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+.reveal pre {
+  background-color: var(--code-bg);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.reveal pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Formula highlight - Compact */
+.formula-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-size: 1.1em;
+  font-family: 'Consolas', monospace;
+}
+
+/* Animation containers */
+.demo-container {
+  background: var(--code-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.demo-step {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  margin: 10px 0;
+  padding: 10px;
+  background: white;
+  border-left: 4px solid var(--accent-color);
+}
+
+.demo-step.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Excel cell simulation */
+.excel-cell {
+  display: inline-block;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  margin: 2px;
+  font-family: 'Consolas', monospace;
+  min-width: 80px;
+  text-align: center;
+}
+
+.excel-cell.header {
+  background: #E8F4FD;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.excel-cell.formula {
+  background: #FFF3E0;
+  color: var(--accent-color);
+}
+
+/* Keyboard shortcut styling */
+.key {
+  display: inline-block;
+  background: linear-gradient(to bottom, #f9f9f9 0%, #e8e8e8 100%);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin: 2px;
+  font-family: 'Consolas', monospace;
+  font-size: 0.9em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.key.combo {
+  background: linear-gradient(to bottom, #E3F2FD 0%, #BBDEFB 100%);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Download button */
+.download-btn {
+  display: inline-block;
+  background: var(--accent-color);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255,107,53,0.4);
+}
+
+/* Progress bar */
+.reveal .progress {
+  background: rgba(0,0,0,0.1);
+  height: 4px;
+}
+
+.reveal .progress span {
+  background: var(--primary-color);
+}
+
+/* Slide numbers */
+.reveal .slide-number {
+  background: var(--primary-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+/* Table styling */
+.reveal table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+
+.reveal table th {
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.reveal table td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.reveal table tr:nth-child(even) {
+  background: #F9F9F9;
+}
+
+/* Fragment animations */
+.fragment.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fragment.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+/* Exercise section */
+.exercise-card {
+  background: white;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 12px;
+  margin: 8px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.exercise-card h3 {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+.difficulty {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.difficulty.basic {
+  background: #E8F5E9;
+  color: #4CAF50;
+}
+
+.difficulty.advanced {
+  background: #FFF3E0;
+  color: #FF9800;
+}
+
+/* Two column layout */
+.two-column {
+  display: flex;
+  gap: 30px;
+}
+
+.two-column > div {
+  flex: 1;
+}
+
+/* Highlight box */
+.highlight-box {
+  background: #FFF8E1;
+  border-left: 4px solid #FFC107;
+  padding: 15px 20px;
+  margin: 15px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Formula Animation Styles - Compact */
+.formula-animation {
+  margin: 10px 0;
+  padding: 10px;
+  background: #FAFAFA;
+  border-radius: 10px;
+  border: 1px solid #E0E0E0;
+}
+
+.calculation-flow {
+  text-align: center;
+}
+
+.calculation-flow .arrow {
+  font-size: 1.2em;
+  color: #1E88E5;
+  margin: 5px 0;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.calc-step {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.calc-step .highlight {
+  background: #FFF9C4;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #F57C00;
+}
+
+.result {
+  background: #E8F5E9;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.final-result {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.final-result strong {
+  font-size: 1.4em;
+}
+
+.highlight-green {
+  background: #C8E6C9;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #2E7D32;
+}
+
+.highlight-red {
+  background: #FFCDD2;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #C62828;
+}
+
+.highlight-blue {
+  background: #BBDEFB;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #1565C0;
+}
+
+.highlight-yellow {
+  background: #FFF9C4;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #F57F17;
+}
+
+.scenario-box {
+  background: #E3F2FD;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0;
+  border-left: 4px solid #1E88E5;
+}
+
+.scenario-box h4 {
+  margin-top: 0;
+  color: #1565C0;
+}
+
+.condition-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.condition {
+  background: #E3F2FD;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.check-result {
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.check-result.pass {
+  background: #C8E6C9;
+  color: #2E7D32;
+}
+
+.check-result.fail {
+  background: #FFCDD2;
+  color: #C62828;
+}
+
+.branch-flow {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.branch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.branch.true-branch {
+  background: #C8E6C9;
+  color: #2E7D32;
+}
+
+.branch.false-branch {
+  background: #FFCDD2;
+  color: #C62828;
+}
+
+.nested-level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: #F5F5F5;
+  border-radius: 8px;
+  margin: 5px 0;
+}
+
+.nested-level .level {
+  background: #1E88E5;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8em;
+}
+
+.vlookup-params {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.vlookup-params .param {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #E0E0E0;
+}
+
+.vlookup-params .param-name {
+  font-weight: bold;
+  color: #666;
+}
+
+.vlookup-params .param-value {
+  color: #1E88E5;
+  font-family: 'Consolas', monospace;
+}
+
+.search-process {
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-process .step {
+  padding: 10px;
+  margin: 5px 0;
+  background: white;
+  border-left: 3px solid #4CAF50;
+  border-radius: 0 5px 5px 0;
+}
+
+.text-process {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.text-process .process-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+.text-process .label {
+  font-weight: bold;
+  color: #666;
+  min-width: 120px;
+}
+
+.text-process .text-display {
+  font-family: 'Consolas', monospace;
+  font-size: 1.1em;
+  flex: 1;
+}
+
+.text-process .text-display .dim {
+  color: #BBB;
+}
+
+.text-process .char-index {
+  font-size: 0.8em;
+  color: #999;
+  margin-top: 5px;
+  font-family: 'Consolas', monospace;
+}
+
+.text-process .char-index .highlight {
+  color: #1E88E5;
+  font-weight: bold;
+}
+
+.concat-formula {
+  background: #E8EAF6;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: 'Consolas', monospace;
+  font-size: 1.2em;
+  color: #3F51B5;
+}
+
+.concat-process {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.concat-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+}
+
+.concat-item .source {
+  background: #E3F2FD;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-family: 'Consolas', monospace;
+}
+
+.concat-item .value {
+  background: #C8E6C9;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: #2E7D32;
+}
+
+.date-function-comparison {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.func-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-width: 150px;
+}
+
+.func-box .func-name {
+  font-family: 'Consolas', monospace;
+  font-size: 1.2em;
+  color: #1E88E5;
+  margin-bottom: 10px;
+}
+
+.func-box .func-result {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.func-box .func-desc {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.vs {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #FF6B35;
+}
+
+.extract-process {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.extract-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+}
+
+.extract-item .formula {
+  background: #E3F2FD;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-family: 'Consolas', monospace;
+}
+
+.extract-item .result {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+.extract-item .label {
+  font-weight: bold;
+  color: #666;
+}
+
+.datedif-params {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.param-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: 'Consolas', monospace;
+}
+
+.unit-options {
+  display: flex;
+  gap: 20px;
+}
+
+.unit {
+  background: #FF6B35;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.unit-desc {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.unit-table table {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/* Excel Table Styles - Formula Animation - Compact */
+.excel-table {
+  border-collapse: collapse;
+  margin: 8px auto;
+  font-family: 'Consolas', 'Microsoft YaHei', sans-serif;
+  font-size: 0.85em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+  transform: scale(0.95);
+  transform-origin: center top;
+}
+
+.excel-table th,
+.excel-table td {
+  border: 1px solid #D0D0D0;
+  padding: 6px 12px;
+  text-align: center;
+  min-width: 50px;
+}
+
+.excel-table th {
+  background: #F5F5F5;
+  font-weight: bold;
+  color: #333;
+}
+
+.excel-table .row-header {
+  background: #E8E4E4;
+  color: #666;
+  font-weight: bold;
+  text-align: center;
+  width: 40px;
+}
+
+.excel-table .col-header {
+  background: #E8E4E4;
+  color: #666;
+  font-weight: bold;
+}
+
+.excel-table .cell {
+  background: white;
+  color: #333;
+}
+
+.excel-table .cell.header {
+  background: #E8F4FD;
+  color: #1565C0;
+  font-weight: bold;
+}
+
+.excel-table .cell.highlight-yellow {
+  background: #FFF9C4;
+  color: #F57F17;
+  font-weight: bold;
+}
+
+.excel-table .cell.highlight-green {
+  background: #C8E6C9;
+  color: #2E7D32;
+  font-weight: bold;
+}
+
+.excel-table .cell.highlight-red {
+  background: #FFCDD2;
+  color: #C62828;
+  font-weight: bold;
+}
+
+/* Sum Process Animation */
+.sum-process {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 1.2em;
+}
+
+.sum-process .number {
+  background: #FFF9C4;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #F57F17;
+}
+
+.sum-process .operator {
+  font-weight: bold;
+  color: #666;
+  font-size: 1.3em;
+}
+
+.sum-process .result {
+  background: #C8E6C9;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #2E7D32;
+  font-size: 1.3em;
+}
+
+/* Average Process */
+.average-process {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.average-process .step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.average-process .label {
+  font-weight: bold;
+  color: #666;
+  min-width: 80px;
+  text-align: right;
+}
+
+.average-process .calc {
+  color: #333;
+}
+
+.average-process .result {
+  background: #C8E6C9;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: #2E7D32;
+}
+
+/* MAX/MIN Result Display */
+.maxmin-result {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.maxmin-result .max-line,
+.maxmin-result .min-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.maxmin-result .label {
+  font-weight: bold;
+  color: #666;
+  min-width: 60px;
+  text-align: right;
+}
+
+.maxmin-result .comparison {
+  font-family: 'Consolas', monospace;
+  font-size: 1.1em;
+}
+
+/* Text Extract Demo */
+.text-extract-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.text-extract-demo .extract-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+}
+
+.text-extract-demo .formula {
+  background: #E3F2FD;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-family: 'Consolas', monospace;
+  font-weight: bold;
+  color: #1565C0;
+}
+
+.text-extract-demo .text-show {
+  font-family: 'Consolas', monospace;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+.text-extract-demo .text-show .dim {
+  color: #BBB;
+}
+
+.text-extract-demo .result {
+  background: #C8E6C9;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #2E7D32;
+}
+
+/* IFS Function Styles */
+.ifs-formula {
+  background: #E8EAF6;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-family: 'Consolas', monospace;
+  font-size: 0.95em;
+  color: #3F51B5;
+  word-break: break-all;
+}
+
+.ifs-process {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ifs-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+}
+
+.ifs-check .condition {
+  background: #E3F2FD;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-family: 'Consolas', monospace;
+  font-weight: bold;
+}
+
+.ifs-check .result {
+  background: #FFCDD2;
+  padding: 5px 12px;
+  border-radius: 15px;
+  color: #C62828;
+}
+
+.ifs-check .result.pass {
+  background: #C8E6C9;
+  color: #2E7D32;
+}
+
+/* SUMIFS/COUNTIFS Function Styles */
+.sumifs-formula,
+.countifs-formula {
+  background: #E8F5E9;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-family: 'Consolas', monospace;
+  font-size: 0.95em;
+  color: #2E7D32;
+  word-break: break-all;
+}
+
+.sumifs-process,
+.countifs-process {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+}
+
+.filter-step .label {
+  background: #E3F2FD;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: #1565C0;
+}
+
+.filter-step .result {
+  background: #FFF9C4;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: #F57F17;
+}
+
+.sum-step .label,
+.count-step .label {
+  font-weight: bold;
+  color: #666;
+}
+
+.sum-step .value,
+.count-step .value {
+  background: #C8E6C9;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: #2E7D32;
+  font-size: 1.2em;
+}
+
+/* Excel row styling */
+.excel-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+/* Two-column layout for formula slides */
+.formula-slide {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+}
+
+.formula-left {
+  flex: 1;
+  max-width: 45%;
+  text-align: left;
+}
+
+.formula-right {
+  flex: 1;
+  max-width: 55%;
+  text-align: center;
+}
+
+.formula-left h3 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.formula-syntax {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: 'Consolas', monospace;
+  font-size: 1em;
+  margin: 15px 0;
+  word-break: break-all;
+}
+
+.formula-params {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.formula-params h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 0.9em;
+}
+
+.param-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 0.85em;
+}
+
+.param-name {
+  font-weight: bold;
+  color: var(--primary-color);
+  min-width: 60px;
+}
+
+.param-desc {
+  color: #666;
+  flex: 1;
+}
+
+.formula-principle {
+  background: #FFF8E1;
+  border-left: 4px solid #FFC107;
+  padding: 12px 15px;
+  margin-top: 15px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9em;
+}
+
+.formula-principle strong {
+  color: #F57C00;
+}
+
+/* Compact animation for right side */
+.formula-right .formula-animation {
+  margin: 0;
+  padding: 10px;
+}
+
+.formula-right .excel-table {
+  transform: scale(0.9);
+  margin: 5px auto;
+}
+
+.formula-right .calc-step {
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.formula-right .final-result {
+  padding: 10px 15px;
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+/* Two column layout for chapters */
+.two-column {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.left-col {
+  flex: 1;
+  text-align: left;
+}
+
+.right-col {
+  flex: 1;
+  text-align: center;
+}
+
+.demo-box {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Shortcut detail styles */
+.shortcut-detail {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.shortcut-detail h4 {
+  color: var(--primary-color);
+  margin: 0 0 10px 0;
+  font-size: 1em;
+}
+
+.shortcut-detail p {
+  font-size: 0.85em;
+  line-height: 1.6;
+  margin: 5px 0;
+  color: #555;
+}
+
+.shortcut-detail .tip {
+  background: #E8F5E9;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 0.8em;
+  color: #2E7D32;
+  border-left: 3px solid #4CAF50;
+}
+
+/* Print styles */
+@media print {
+  .reveal .controls,
+  .reveal .progress,
+  .reveal .slide-number {
+    display: none;
+  }
+}
