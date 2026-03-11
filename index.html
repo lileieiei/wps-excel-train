@@ -68,7 +68,7 @@
                             <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5em; font-weight: 700;">04</div>
                             <div>
                                 <h4 style="margin: 0; color: var(--text-primary);">进阶技巧</h4>
-                                <p style="margin: 5px 0 0 0; font-size: 0.85em; color: var(--text-secondary);">数据透视、条件格式等</p>
+                                <p style="margin: 5px 0 0 0; font-size: 0.85em; color: var(--text-secondary);">数据透视、条件格式、分列、导入数据</p>
                             </div>
                         </div>
                     </div>
@@ -81,6 +81,66 @@
                             <p style="margin: 5px 0 0 0; font-size: 0.85em; color: var(--text-secondary);">7个真实场景案例，从基础到高级</p>
                         </div>
                     </div>
+                </div>
+                <div class="exercise-card" style="margin-top: 20px;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5em; font-weight: 700;">06</div>
+                        <div>
+                            <h4 style="margin: 0; color: var(--text-primary);">人力资源数据分析</h4>
+                            <p style="margin: 5px 0 0 0; font-size: 0.85em; color: var(--text-secondary);">日期函数、身份证提取、透视表实战</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Excel图灵完备性介绍 -->
+            <section>
+                <h2>🧠 Excel 的无限可能</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+                    <div class="exercise-card" style="margin: 0; text-align: left;">
+                        <div style="font-size: 2.5em; margin-bottom: 15px;">🔬</div>
+                        <h3 style="color: var(--text-primary); margin-bottom: 10px;">图灵完备</h3>
+                        <p style="font-size: 0.9em; color: var(--text-secondary); line-height: 1.6;">
+                            Excel 是一门<strong>图灵完备</strong>的编程语言，理论上可以实现任何可计算问题。
+                        </p>
+                    </div>
+                    <div class="exercise-card" style="margin: 0; text-align: left;">
+                        <div style="font-size: 2.5em; margin-bottom: 15px;">🎮</div>
+                        <h3 style="color: var(--text-primary); margin-bottom: 10px;">模拟任意软件</h3>
+                        <p style="font-size: 0.9em; color: var(--text-secondary); line-height: 1.6;">
+                            从简单计算器到复杂游戏，Excel 都能模拟实现。
+                        </p>
+                    </div>
+                </div>
+                <div style="margin-top: 30px;">
+                    <div class="exercise-card" style="background: linear-gradient(135deg, #1E293B 0%, #334155 100%); color: white;">
+                        <h3 style="color: white; margin-bottom: 20px;">✨ 核心能力</h3>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center;">
+                            <div>
+                                <div style="font-size: 2em; margin-bottom: 10px;">🔄</div>
+                                <strong>循环</strong>
+                                <p style="font-size: 0.8em; opacity: 0.8; margin-top: 5px;">通过迭代公式实现</p>
+                            </div>
+                            <div>
+                                <div style="font-size: 2em; margin-bottom: 10px;">🔀</div>
+                                <strong>分支</strong>
+                                <p style="font-size: 0.8em; opacity: 0.8; margin-top: 5px;">IF/SWITCH 逻辑判断</p>
+                            </div>
+                            <div>
+                                <div style="font-size: 2em; margin-bottom: 10px;">💾</div>
+                                <strong>无限存储</strong>
+                                <p style="font-size: 0.8em; opacity: 0.8; margin-top: 5px;">百万行数据容量</p>
+                            </div>
+                            <div>
+                                <div style="font-size: 2em; margin-bottom: 10px;">📊</div>
+                                <strong>状态存储</strong>
+                                <p style="font-size: 0.8em; opacity: 0.8; margin-top: 5px;">单元格即变量</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight-box info" style="margin-top: 25px;">
+                    <strong>💡 你知道吗？</strong>有人用 Excel 做出了 3D 引擎、机器学习模型，甚至是完整的操作系统模拟器！
                 </div>
             </section>
 
@@ -898,10 +958,12 @@
                     <h2>第4章</h2>
                     <h1 style="font-size: 2.5em; margin: 20px 0;">进阶技巧</h1>
                     <p>数据处理高级玩法</p>
-                    <div style="margin-top: 40px; display: flex; justify-content: center; gap: 20px;">
-                        <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">📊 数据透视</span>
-                        <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">🎨 条件格式</span>
-                        <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">✅ 数据验证</span>
+                    <div style="margin-top: 40px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">📊 数据透视</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">🎨 条件格式</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">✅ 数据验证</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">✂️ 数据分列</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">📥 导入数据</span>
                     </div>
                 </div>
             </section>
@@ -1031,6 +1093,192 @@
                 </div>
             </section>
 
+            <!-- 数据分列 -->
+            <section>
+                <h2>✂️ 数据分列 - 拆分合并单元格</h2>
+                <p style="color: var(--text-secondary);">将一列数据拆分成多列，或合并多列数据</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 30px;">
+                    <div class="exercise-card" style="margin: 0;">
+                        <h4 style="margin-bottom: 15px;">📍 分列功能介绍</h4>
+                        <p style="font-size: 0.9em; color: var(--text-secondary); margin-bottom: 15px;">
+                            当单元格中包含多个信息时（如"张三-经理-8000"），可以用分列功能自动拆分成多个列。
+                        </p>
+                        <div style="background: var(--bg-tertiary); padding: 15px; border-radius: 8px; font-size: 0.85em;">
+                            <div style="margin-bottom: 10px;"><strong>支持的分隔符：</strong></div>
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span style="background: white; padding: 4px 10px; border-radius: 4px;">逗号 ,</span>
+                                <span style="background: white; padding: 4px 10px; border-radius: 4px;">分号 ;</span>
+                                <span style="background: white; padding: 4px 10px; border-radius: 4px;">制表符</span>
+                                <span style="background: white; padding: 4px 10px; border-radius: 4px;">空格</span>
+                                <span style="background: white; padding: 4px 10px; border-radius: 4px;">自定义 -</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise-card" style="margin: 0;">
+                        <h4 style="margin-bottom: 15px;">📝 操作步骤</h4>
+                        <ol style="font-size: 0.9em; line-height: 2;">
+                            <li>选中要分列的数据列</li>
+                            <li>点击 <strong>数据 → 分列</strong></li>
+                            <li>选择分隔符号类型</li>
+                            <li>预览分列效果</li>
+                            <li>设置目标单元格位置</li>
+                            <li>点击完成</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 25px;">
+                    <div class="exercise-card" style="background: linear-gradient(135deg, #1E293B 0%, #334155 100%); color: white;">
+                        <h4 style="color: white; margin-bottom: 15px;">🎯 实战案例</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.85em;">
+                            <div>
+                                <div style="margin-bottom: 10px;"><strong>分列前：</strong></div>
+                                <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
+                                    <tr style="background: rgba(255,255,255,0.1);">
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">员工信息</td>
+                                    </tr>
+                                    <tr><td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">张三-经理-8000</td></tr>
+                                    <tr><td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">李四-职员-5000</td></tr>
+                                    <tr><td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">王五-主管-6500</td></tr>
+                                </table>
+                            </div>
+                            <div>
+                                <div style="margin-bottom: 10px;"><strong>分列后：</strong></div>
+                                <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
+                                    <tr style="background: rgba(255,255,255,0.1);">
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">姓名</td>
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">职位</td>
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">工资</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">张三</td>
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">经理</td>
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">8000</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">李四</td>
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">职员</td>
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">5000</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">王五</td>
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">主管</td>
+                                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">6500</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box info" style="margin-top: 20px;">
+                    <strong>💡 提示：</strong>分列前建议先复制备份原数据。分列时选择"固定宽度"可以按字符位置拆分（如从身份证号提取出生年月）。
+                </div>
+            </section>
+
+            <!-- 导入外部数据 -->
+            <section>
+                <h2>📥 导入外部数据</h2>
+                <p style="color: var(--text-secondary);">从各种数据源导入数据到Excel</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px;">
+                    <div class="exercise-card" style="margin: 0; text-align: center;">
+                        <div style="font-size: 3em; margin-bottom: 15px;">📄</div>
+                        <h4>CSV/TXT文件</h4>
+                        <p style="font-size: 0.85em; color: var(--text-secondary);">从逗号分隔或文本文件导入</p>
+                        <div style="margin-top: 15px; font-size: 0.75em; background: var(--bg-tertiary); padding: 10px; border-radius: 6px;">
+                            数据 → 导入数据 → 选择CSV文件
+                        </div>
+                    </div>
+                    <div class="exercise-card" style="margin: 0; text-align: center;">
+                        <div style="font-size: 3em; margin-bottom: 15px;">🗃️</div>
+                        <h4>数据库</h4>
+                        <p style="font-size: 0.85em; color: var(--text-secondary);">连接MySQL、SQL Server等数据库</p>
+                        <div style="margin-top: 15px; font-size: 0.75em; background: var(--bg-tertiary); padding: 10px; border-radius: 6px;">
+                            数据 → 导入数据 → 数据库
+                        </div>
+                    </div>
+                    <div class="exercise-card" style="margin: 0; text-align: center;">
+                        <div style="font-size: 3em; margin-bottom: 15px;">🌐</div>
+                        <h4>网页数据</h4>
+                        <p style="font-size: 0.85em; color: var(--text-secondary);">从网页表格抓取数据</p>
+                        <div style="margin-top: 15px; font-size: 0.75em; background: var(--bg-tertiary); padding: 10px; border-radius: 6px;">
+                            数据 → 导入数据 → 自网站
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 25px;">
+                    <div class="two-column">
+                        <div class="left-col">
+                            <div class="demo-container">
+                                <h4>📋 导入设置选项</h4>
+                                <div style="margin: 15px 0; font-size: 0.9em;">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin: 12px 0;">
+                                        <span style="color: #3B82F6; font-size: 1.3em;">🔤</span>
+                                        <span><strong>文件编码：</strong>UTF-8 / GBK</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 10px; margin: 12px 0;">
+                                        <span style="color: #3B82F6; font-size: 1.3em;">📊</span>
+                                        <span><strong>分隔符：</strong>逗号、分号、制表符</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 10px; margin: 12px 0;">
+                                        <span style="color: #3B82F6; font-size: 1.3em;">🔢</span>
+                                        <span><strong>数据格式：</strong>文本、日期、数值</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 10px; margin: 12px 0;">
+                                        <span style="color: #3B82F6; font-size: 1.3em;">✓</span>
+                                        <span><strong>预览：</strong>导入前查看数据效果</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-col">
+                            <div class="demo-container">
+                                <h4>🎯 CSV导入实战</h4>
+                                <p style="font-size: 0.9em; margin: 10px 0;">导入员工数据CSV文件：</p>
+                                <ol style="font-size: 0.85em; line-height: 1.9;">
+                                    <li>准备CSV文件，编码选UTF-8</li>
+                                    <li>数据 → 导入数据 → 选择文件</li>
+                                    <li>选择分隔符（通常为逗号）</li>
+                                    <li>设置每列的数据格式
+                                        <ul style="margin: 5px 0; padding-left: 20px;">
+                                            <li>身份证 → 文本格式</li>
+                                            <li>日期 → 日期格式</li>
+                                            <li>工资 → 数值格式</li>
+                                        </ul>
+                                    </li>
+                                    <li>选择导入位置，点击确定</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scenario-box" style="margin-top: 20px;">
+                    <h4>💡 常见问题解决</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.85em; margin-top: 10px;">
+                        <div>
+                            <strong>❓ 中文乱码</strong>
+                            <p style="margin: 5px 0; color: var(--text-secondary);">尝试切换编码为GBK或UTF-8</p>
+                        </div>
+                        <div>
+                            <strong>❓ 长数字变科学计数</strong>
+                            <p style="margin: 5px 0; color: var(--text-secondary);">将该列设为"文本"格式再导入</p>
+                        </div>
+                        <div>
+                            <strong>❓ 日期格式错误</strong>
+                            <p style="margin: 5px 0; color: var(--text-secondary);">指定日期格式（如YMD/DMY）</p>
+                        </div>
+                        <div>
+                            <strong>❓ 数据错位</strong>
+                            <p style="margin: 5px 0; color: var(--text-secondary);">检查分隔符是否正确</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- 第5章标题 -->
             <section class="chapter-slide" data-background="linear-gradient(135deg, #EC4899 0%, #DB2777 100%)">
                 <div style="text-align: center;">
@@ -1128,6 +1376,463 @@
                 </div>
             </section>
 
+            <!-- 第6章标题 -->
+            <section class="chapter-slide" data-background="linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)">
+                <div style="text-align: center;">
+                    <div style="font-size: 5em; margin-bottom: 30px;">👔</div>
+                    <h2>第6章</h2>
+                    <h1 style="font-size: 2.5em; margin: 20px 0;">人力资源数据分析</h1>
+                    <p>基于真实员工数据的高阶应用</p>
+                    <div style="margin-top: 40px; display: flex; justify-content: center; gap: 20px;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">📅 日期函数</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">🔢 文本提取</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">📊 透视表</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 日期函数：工龄和年龄计算 -->
+            <section class="formula-slide">
+                <div class="formula-left">
+                    <h3>📅 DATEDIF函数 - 计算工龄和年龄</h3>
+                    <div class="formula-syntax">=DATEDIF(开始日期,结束日期,"单位")</div>
+                    <div class="formula-params">
+                        <h4>📋 参数说明</h4>
+                        <div class="param-item">
+                            <span class="param-name">"Y"</span>
+                            <span class="param-desc">返回完整年数（计算年龄、工龄）</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">"M"</span>
+                            <span class="param-desc">返回完整月数</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">"D"</span>
+                            <span class="param-desc">返回天数</span>
+                        </div>
+                    </div>
+                    <div class="scenario-box">
+                        <h4>HR实战应用</h4>
+                        <p style="margin: 0; font-size: 0.9em;">自动计算员工工龄、年龄、司龄，用于福利计算、退休预警等。</p>
+                    </div>
+                    <div class="highlight-box info" style="margin-top: 15px;">
+                        <strong>💡 注意：</strong>这个函数是隐藏函数，不会自动提示，但可以直接使用
+                    </div>
+                </div>
+                <div class="formula-right">
+                    <h4 style="margin-bottom: 20px; color: var(--text-secondary);">🎬 实例演示</h4>
+                    <div class="calculation-flow">
+                        <div style="background: var(--bg-tertiary); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <div style="font-family: 'JetBrains Mono'; font-size: 0.9em; margin-bottom: 10px;">计算年龄：</div>
+                            <div style="font-family: 'JetBrains Mono'; background: #1E293B; padding: 10px; border-radius: 6px; color: #7DD3FC;">
+                                =DATEDIF(出生日期,TODAY(),"Y")
+                            </div>
+                        </div>
+                        <div style="background: var(--bg-tertiary); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <div style="font-family: 'JetBrains Mono'; font-size: 0.9em; margin-bottom: 10px;">计算工龄：</div>
+                            <div style="font-family: 'JetBrains Mono'; background: #1E293B; padding: 10px; border-radius: 6px; color: #7DD3FC;">
+                                =DATEDIF(参加工作日期,TODAY(),"Y")&"年"&DATEDIF(参加工作日期,TODAY(),"YM")&"个月"
+                            </div>
+                        </div>
+                        <div class="scenario-box" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: white;">
+                            <h4 style="color: white;">结果示例</h4>
+                            <p style="margin: 0; font-size: 0.9em;">孙家龙：工龄 40年，年龄 60岁</p>
+                            <p style="margin: 5px 0 0 0; font-size: 0.9em;">陈关敏：工龄 26年，年龄 44岁</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 文本函数：身份证信息提取 -->
+            <section class="formula-slide">
+                <div class="formula-left">
+                    <h3>🔢 文本函数 - 从身份证提取信息</h3>
+                    <div class="formula-syntax">=MID(文本,开始位置,提取长度)</div>
+                    <div class="formula-params">
+                        <h4>📋 身份证结构</h4>
+                        <div class="param-item">
+                            <span class="param-name">第1-6位</span>
+                            <span class="param-desc">地区代码（如110101是北京市东城区）</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">第7-14位</span>
+                            <span class="param-desc">出生日期（YYYYMMDD）</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">第17位</span>
+                            <span class="param-desc">性别码（奇数男，偶数女）</span>
+                        </div>
+                    </div>
+                    <div class="scenario-box">
+                        <h4>HR应用场景</h4>
+                        <p style="margin: 0; font-size: 0.9em;">自动提取出生日期、判断性别、验证身份证有效性。</p>
+                    </div>
+                </div>
+                <div class="formula-right">
+                    <h4 style="margin-bottom: 20px; color: var(--text-secondary);">🎬 实战公式</h4>
+                    <div class="calculation-flow">
+                        <div style="background: var(--bg-tertiary); padding: 12px; border-radius: 8px; margin-bottom: 12px;">
+                            <div style="font-size: 0.85em; color: var(--text-secondary); margin-bottom: 8px;">提取出生日期：</div>
+                            <div style="font-family: 'JetBrains Mono'; font-size: 0.8em; background: #1E293B; padding: 8px; border-radius: 6px; color: #7DD3FC;">
+                                =TEXT(MID(身份证号,7,8),"0000-00-00")
+                            </div>
+                        </div>
+                        <div style="background: var(--bg-tertiary); padding: 12px; border-radius: 8px; margin-bottom: 12px;">
+                            <div style="font-size: 0.85em; color: var(--text-secondary); margin-bottom: 8px;">判断性别：</div>
+                            <div style="font-family: 'JetBrains Mono'; font-size: 0.8em; background: #1E293B; padding: 8px; border-radius: 6px; color: #7DD3FC;">
+                                =IF(MOD(MID(身份证号,17,1),2)=1,"男","女")
+                            </div>
+                        </div>
+                        <div style="background: var(--bg-tertiary); padding: 12px; border-radius: 8px; margin-bottom: 12px;">
+                            <div style="font-size: 0.85em; color: var(--text-secondary); margin-bottom: 8px;">计算年龄（从身份证）：</div>
+                            <div style="font-family: 'JetBrains Mono'; font-size: 0.8em; background: #1E293B; padding: 8px; border-radius: 6px; color: #7DD3FC;">
+                                =DATEDIF(TEXT(MID(身份证号,7,8),"0000-00-00"),TODAY(),"Y")
+                            </div>
+                        </div>
+                        <div class="highlight-box success" style="margin-top: 15px;">
+                            <strong>✅ 验证：</strong>第2位员工张卫华，身份证110102197201070010，提取后：1972-01-07，性别男
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 薪资计算 -->
+            <section class="formula-slide">
+                <div class="formula-left">
+                    <h3>💰 薪资计算综合应用</h3>
+                    <div class="formula-syntax">=基本工资+职务工资+岗位津贴</div>
+                    <div class="formula-params">
+                        <h4>📋 计算项目</h4>
+                        <div class="param-item">
+                            <span class="param-name">应发工资</span>
+                            <span class="param-desc">=SUM(基本工资:岗位津贴)</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">个税计算</span>
+                            <span class="param-desc">=MAX((应发工资-5000)*税率-速算扣除数,0)</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">实发工资</span>
+                            <span class="param-desc">=应发工资-个税-社保</span>
+                        </div>
+                    </div>
+                    <div class="scenario-box">
+                        <h4>进阶：按职称加津贴</h4>
+                        <p style="margin: 0; font-size: 0.85em;">高工额外+200，工程师+100，其他+0</p>
+                        <div style="font-family: 'JetBrains Mono'; font-size: 0.75em; background: var(--bg-tertiary); padding: 8px; border-radius: 6px; margin-top: 10px;">
+                            =SUM(工资项)+IF(职称="高工",200,IF(职称="工程师",100,0))
+                        </div>
+                    </div>
+                </div>
+                <div class="formula-right">
+                    <h4 style="margin-bottom: 20px; color: var(--text-secondary);">📊 员工薪资表示例</h4>
+                    <div style="font-size: 0.8em;">
+                        <table class="excel-table" style="width: 100%;">
+                            <tr>
+                                <th class="cell header">姓名</th>
+                                <th class="cell header">基本工资</th>
+                                <th class="cell header">职务工资</th>
+                                <th class="cell header">津贴</th>
+                                <th class="cell header">应发</th>
+                            </tr>
+                            <tr>
+                                <td class="cell">孙家龙</td>
+                                <td class="cell">800</td>
+                                <td class="cell">450</td>
+                                <td class="cell">500</td>
+                                <td class="cell highlight-yellow">1750</td>
+                            </tr>
+                            <tr>
+                                <td class="cell">张卫华</td>
+                                <td class="cell">700</td>
+                                <td class="cell">450</td>
+                                <td class="cell">300</td>
+                                <td class="cell highlight-yellow">1450</td>
+                            </tr>
+                            <tr>
+                                <td class="cell">陈文坤</td>
+                                <td class="cell">900</td>
+                                <td class="cell">600</td>
+                                <td class="cell">500</td>
+                                <td class="cell highlight-yellow">2000</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="highlight-box info" style="margin-top: 15px;">
+                        <strong>💡 统计：</strong>140名员工，平均应发工资约 1450 元
+                    </div>
+                </div>
+            </section>
+
+            <!-- 多条件统计 -->
+            <section class="formula-slide">
+                <div class="formula-left">
+                    <h3>📊 COUNTIFS / SUMIFS - 多条件统计</h3>
+                    <div class="formula-syntax">=COUNTIFS(条件区域1,条件1,条件区域2,条件2,...)</div>
+                    <div class="formula-params">
+                        <h4>📋 HR统计需求</h4>
+                        <div class="param-item">
+                            <span class="param-name">部门人数</span>
+                            <span class="param-desc">=COUNTIFS(单位列,"A部门")</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">女经理人数</span>
+                            <span class="param-desc">=COUNTIFS(性别,"女",职务,"经理")</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">高工总工资</span>
+                            <span class="param-desc">=SUMIFS(应发列,职称,"高工")</span>
+                        </div>
+                    </div>
+                    <div class="scenario-box">
+                        <h4>复杂条件示例</h4>
+                        <p style="margin: 0; font-size: 0.85em;">统计A部门工龄超过30年的高工人数：</p>
+                        <div style="font-family: 'JetBrains Mono'; font-size: 0.75em; background: var(--bg-tertiary); padding: 8px; border-radius: 6px; margin-top: 10px;">
+                            =COUNTIFS(单位,"A部门",职称,"高工",工龄,">30")
+                        </div>
+                    </div>
+                </div>
+                <div class="formula-right">
+                    <h4 style="margin-bottom: 20px; color: var(--text-secondary);">📈 数据统计结果</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="exercise-card" style="margin: 0; text-align: center;">
+                            <div style="font-size: 2em; font-weight: 700; color: var(--primary-color);">140</div>
+                            <div style="font-size: 0.85em; color: var(--text-secondary);">总人数</div>
+                        </div>
+                        <div class="exercise-card" style="margin: 0; text-align: center;">
+                            <div style="font-size: 2em; font-weight: 700; color: var(--primary-color);">44</div>
+                            <div style="font-size: 0.85em; color: var(--text-secondary);">A部门</div>
+                        </div>
+                        <div class="exercise-card" style="margin: 0; text-align: center;">
+                            <div style="font-size: 2em; font-weight: 700; color: var(--primary-color);">4</div>
+                            <div style="font-size: 0.85em; color: var(--text-secondary);">经理人数</div>
+                        </div>
+                        <div class="exercise-card" style="margin: 0; text-align: center;">
+                            <div style="font-size: 2em; font-weight: 700; color: var(--primary-color);">31</div>
+                            <div style="font-size: 0.85em; color: var(--text-secondary);">高工人数</div>
+                        </div>
+                    </div>
+                    <div class="scenario-box" style="margin-top: 15px;">
+                        <h4>各部门平均工资</h4>
+                        <p style="margin: 0; font-size: 0.85em;">A部门：1480元 | B部门：1420元 | C部门：1450元</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 数据透视表实战 -->
+            <section>
+                <h2>📊 数据透视表实战</h2>
+                <p style="color: var(--text-secondary);">快速分析140名员工的多维度数据</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 30px;">
+                    <div class="exercise-card" style="margin: 0;">
+                        <h4 style="margin-bottom: 15px;">🎯 分析维度1：部门-性别分布</h4>
+                        <table class="excel-table" style="font-size: 0.8em; width: 100%;">
+                            <tr>
+                                <th class="cell header">部门</th>
+                                <th class="cell header">男</th>
+                                <th class="cell header">女</th>
+                                <th class="cell header">总计</th>
+                            </tr>
+                            <tr>
+                                <td class="cell">A部门</td>
+                                <td class="cell">36</td>
+                                <td class="cell">8</td>
+                                <td class="cell">44</td>
+                            </tr>
+                            <tr>
+                                <td class="cell">B部门</td>
+                                <td class="cell">35</td>
+                                <td class="cell">7</td>
+                                <td class="cell">42</td>
+                            </tr>
+                            <tr>
+                                <td class="cell">C部门</td>
+                                <td class="cell">47</td>
+                                <td class="cell">7</td>
+                                <td class="cell">54</td>
+                            </tr>
+                        </table>
+                        <p style="font-size: 0.8em; color: var(--text-secondary); margin-top: 10px;">
+                            行：单位 | 列：性别 | 值：计数
+                        </p>
+                    </div>
+                    <div class="exercise-card" style="margin: 0;">
+                        <h4 style="margin-bottom: 15px;">💰 分析维度2：职称-薪资</h4>
+                        <table class="excel-table" style="font-size: 0.8em; width: 100%;">
+                            <tr>
+                                <th class="cell header">职称</th>
+                                <th class="cell header">人数</th>
+                                <th class="cell header">平均薪资</th>
+                            </tr>
+                            <tr>
+                                <td class="cell">高工</td>
+                                <td class="cell">31</td>
+                                <td class="cell">1570</td>
+                            </tr>
+                            <tr>
+                                <td class="cell">工程师</td>
+                                <td class="cell">52</td>
+                                <td class="cell">1420</td>
+                            </tr>
+                            <tr>
+                                <td class="cell">技师</td>
+                                <td class="cell">24</td>
+                                <td class="cell">1380</td>
+                            </tr>
+                            <tr>
+                                <td class="cell">技术员</td>
+                                <td class="cell">33</td>
+                                <td class="cell">1280</td>
+                            </tr>
+                        </table>
+                        <p style="font-size: 0.8em; color: var(--text-secondary); margin-top: 10px;">
+                            行：职称 | 值：计数、平均值
+                        </p>
+                    </div>
+                </div>
+                <div class="highlight-box info" style="margin-top: 25px;">
+                    <strong>💡 操作步骤：</strong>选中数据区域 → 插入 → 数据透视表 → 拖动字段到行/列/值区域 → 设置值汇总方式
+                </div>
+            </section>
+
+            <!-- VLOOKUP员工信息查询 -->
+            <section class="formula-slide">
+                <div class="formula-left">
+                    <h3>🔍 VLOOKUP - 员工信息快速查询</h3>
+                    <div class="formula-syntax">=VLOOKUP(查询值,数据区域,列序号,精确匹配)</div>
+                    <div class="formula-params">
+                        <h4>📋 查询场景</h4>
+                        <div class="param-item">
+                            <span class="param-name">根据姓名查工资</span>
+                            <span class="param-desc">=VLOOKUP("孙家龙",A:L,10,FALSE)</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">根据身份证查部门</span>
+                            <span class="param-desc">=VLOOKUP(身份证号,A:L,3,FALSE)</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">跨表查询</span>
+                            <span class="param-desc">从员工表查询到考勤表</span>
+                        </div>
+                    </div>
+                    <div class="highlight-box warning" style="margin-top: 15px;">
+                        <strong>⚠️ 注意：</strong>第一列必须包含查询值，且要确保没有重复值
+                    </div>
+                </div>
+                <div class="formula-right">
+                    <h4 style="margin-bottom: 20px; color: var(--text-secondary);">🎬 动态查询表示例</h4>
+                    <div style="background: var(--bg-tertiary); padding: 20px; border-radius: 12px;">
+                        <div style="margin-bottom: 15px;">
+                            <label style="font-size: 0.85em; color: var(--text-secondary);">输入姓名：</label>
+                            <div style="background: white; border: 2px solid var(--primary-color); padding: 10px; border-radius: 8px; margin-top: 5px; font-weight: 600;">孙家龙</div>
+                        </div>
+                        <div style="background: #1E293B; padding: 15px; border-radius: 8px; color: #7DD3FC; font-family: 'JetBrains Mono'; font-size: 0.85em; margin-bottom: 15px;">
+                            =VLOOKUP(E2,A:L,3,FALSE)<br>
+                            ↓<br>
+                            "A部门"
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div style="background: white; padding: 10px; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 0.75em; color: var(--text-secondary);">单位</div>
+                                <div style="font-weight: 600;">A部门</div>
+                            </div>
+                            <div style="background: white; padding: 10px; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 0.75em; color: var(--text-secondary);">职务</div>
+                                <div style="font-weight: 600;">经理</div>
+                            </div>
+                            <div style="background: white; padding: 10px; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 0.75em; color: var(--text-secondary);">应发工资</div>
+                                <div style="font-weight: 600; color: #10B981;">1750</div>
+                            </div>
+                            <div style="background: white; padding: 10px; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 0.75em; color: var(--text-secondary);">工龄</div>
+                                <div style="font-weight: 600;">40年</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 条件格式高阶应用 -->
+            <section>
+                <h2>🎨 条件格式高阶应用</h2>
+                <p style="color: var(--text-secondary);">让HR数据一目了然</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px;">
+                    <div class="exercise-card" style="margin: 0;">
+                        <div style="font-size: 2.5em; margin-bottom: 15px;">🔴</div>
+                        <h4>退休预警</h4>
+                        <p style="font-size: 0.85em; color: var(--text-secondary); margin: 10px 0;">年龄≥58岁（男性）或≥53岁（女性）自动标红</p>
+                        <div style="font-family: 'JetBrains Mono'; font-size: 0.7em; background: var(--bg-tertiary); padding: 8px; border-radius: 6px;">
+                            =OR(AND(性别="男",年龄>=58),AND(性别="女",年龄>=53))
+                        </div>
+                    </div>
+                    <div class="exercise-card" style="margin: 0;">
+                        <div style="font-size: 2.5em; margin-bottom: 15px;">🟡</div>
+                        <h4>薪资异常</h4>
+                        <p style="font-size: 0.85em; color: var(--text-secondary); margin: 10px 0;">工资超过平均值20%高亮显示</p>
+                        <div style="font-family: 'JetBrains Mono'; font-size: 0.7em; background: var(--bg-tertiary); padding: 8px; border-radius: 6px;">
+                            =应发工资>AVERAGE($J:$J)*1.2
+                        </div>
+                    </div>
+                    <div class="exercise-card" style="margin: 0;">
+                        <div style="font-size: 2.5em; margin-bottom: 15px;">🟢</div>
+                        <h4>工龄分层</h4>
+                        <p style="font-size: 0.85em; color: var(--text-secondary); margin: 10px 0;">用色阶显示工龄长短</p>
+                        <div style="font-size: 0.8em; color: var(--text-secondary);">
+                            深绿：>35年 | 浅绿：20-35年 | 白色：<20年
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario-box" style="margin-top: 25px;">
+                    <h4>📍 操作路径</h4>
+                    <p style="margin: 0; font-size: 0.9em;">选中数据 → 开始 → 条件格式 → 新建规则 → 使用公式确定要设置格式的单元格 → 输入公式 → 设置格式</p>
+                </div>
+            </section>
+
+            <!-- 综合案例 -->
+            <section>
+                <h2>📋 综合案例：员工信息分析看板</h2>
+                <p style="color: var(--text-secondary);">综合运用所学函数，制作完整分析报表</p>
+                
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 25px; margin-top: 30px;">
+                    <div class="exercise-card" style="margin: 0;">
+                        <h4 style="margin-bottom: 15px;">🎯 分析指标</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <div>
+                                <div style="font-size: 0.8em; color: var(--text-secondary);">总人数</div>
+                                <div style="font-size: 1.5em; font-weight: 700;">=COUNTA(姓名列)</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.8em; color: var(--text-secondary);">平均年龄</div>
+                                <div style="font-size: 1.5em; font-weight: 700;">=AVERAGE(年龄列)</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.8em; color: var(--text-secondary);">平均薪资</div>
+                                <div style="font-size: 1.5em; font-weight: 700;">=AVERAGE(应发列)</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.8em; color: var(--text-secondary);">即将退休</div>
+                                <div style="font-size: 1.5em; font-weight: 700;">=COUNTIFS(年龄,">=58")</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise-card" style="margin: 0; background: linear-gradient(135deg, #1E293B 0%, #334155 100%); color: white;">
+                        <h4 style="color: white; margin-bottom: 15px;">💡 实战提示</h4>
+                        <ul style="font-size: 0.85em; padding-left: 20px; line-height: 1.8;">
+                            <li>使用 TODAY() 确保数据实时更新</li>
+                            <li>用数据验证创建下拉筛选</li>
+                            <li>图表随数据自动变化</li>
+                            <li>保护工作表防止误改</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="highlight-box success" style="margin-top: 25px;">
+                    <strong>✅ 练习任务：</strong>下载"第一次作业.xlsx"数据，完成：①计算所有员工的工龄和年龄 ②统计各部门男女比例 ③找出薪资最高的前10名员工 ④标记出5年内退休的员工
+                </div>
+            </section>
+
             <!-- 结束页 -->
             <section class="cover-slide" data-background="linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%)">
                 <div style="text-align: center; margin-top: 80px;">
@@ -1137,7 +1842,7 @@
                     <div style="margin: 50px 0;">
                         <div style="display: inline-flex; gap: 30px;">
                             <div style="text-align: center;">
-                                <div style="font-size: 2.5em; font-weight: 700; color: #60A5FA;">20+</div>
+                                <div style="font-size: 2.5em; font-weight: 700; color: #60A5FA;">30+</div>
                                 <div style="color: #64748B; font-size: 0.9em;">函数掌握</div>
                             </div>
                             <div style="text-align: center;">
@@ -1145,7 +1850,11 @@
                                 <div style="color: #64748B; font-size: 0.9em;">快捷键</div>
                             </div>
                             <div style="text-align: center;">
-                                <div style="font-size: 2.5em; font-weight: 700; color: #60A5FA;">7</div>
+                                <div style="font-size: 2.5em; font-weight: 700; color: #60A5FA;">6</div>
+                                <div style="color: #64748B; font-size: 0.9em;">章节内容</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5em; font-weight: 700; color: #60A5FA;">7+</div>
                                 <div style="color: #64748B; font-size: 0.9em;">实战案例</div>
                             </div>
                         </div>
