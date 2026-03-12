@@ -9,9 +9,10 @@
 ## 项目特点
 
 - ✅ 完全离线运行，无需网络
+- ✅ 所有资源已本地化（字体、CSS、JS）
 - ✅ 白色简洁主题，专业美观
 - ✅ 动画演示效果，生动形象
-- ✅ 7个实战练习，从基础到高级
+- ✅ 8个实战练习，从基础到高级
 - ✅ 响应式设计，支持多种分辨率
 - ✅ 左右分栏布局，内容清晰易读
 
@@ -23,24 +24,26 @@ wps-excel-training/
 ├── README.md              # 项目说明
 ├── css/
 │   └── custom.css        # 自定义样式
-├── js/
-│   └── animations/       # 动画脚本
-│       ├── formula-demo.js
-│       ├── array-demo.js
-│       └── shortcut-demo.js
+├── lib/                   # 第三方库（全部本地化）
+│   ├── reveal.js/        # Reveal.js核心
+│   ├── highlight.js/     # 代码高亮
+│   └── fonts/            # 本地字体（Inter + JetBrains Mono）
+│       ├── fonts.css     # 字体样式
+│       ├── inter-*.ttf   # Inter字体文件
+│       └── jetbrains-*.ttf # JetBrains Mono字体文件
 ├── exercises/            # 练习文件
 │   ├── basic/           # 基础练习（4个）
 │   │   ├── exercise-01-salary/      # 员工工资核算
 │   │   ├── exercise-02-sales/       # 销售数据统计
 │   │   ├── exercise-03-inventory/   # 库存管理表
 │   │   └── exercise-04-finance/     # 个人理财记账
-│   └── advanced/        # 高级练习（3个）
+│   └── advanced/        # 高级练习（4个）
 │       ├── exercise-05-dashboard/   # 动态销售仪表板
 │       ├── exercise-06-analysis/    # 财务多维度分析
-│       └── exercise-07-automation/  # 自动化报表生成
-└── lib/                 # 第三方库（离线）
-    ├── reveal.js/       # Reveal.js核心
-    └── highlight.js/    # 代码高亮
+│       ├── exercise-07-automation/  # 自动化报表生成
+│       └── exercise-08-hr/          # 人力资源数据分析
+└── js/
+    └── animations/       # 动画脚本
 ```
 
 ## 使用说明
@@ -66,11 +69,14 @@ wps-excel-training/
 
 ### 3. 离线使用
 
-本项目所有资源均已本地化，可以在无网络环境下正常使用：
-- Reveal.js 核心文件
-- Highlight.js 代码高亮
-- 所有CSS样式
-- 所有练习数据
+本项目所有资源均已完全本地化，可以在无网络环境下正常使用：
+- ✅ Reveal.js 核心文件
+- ✅ Highlight.js 代码高亮
+- ✅ Inter 和 JetBrains Mono 字体（已下载到本地）
+- ✅ 所有CSS样式
+- ✅ 所有练习数据
+
+**无需网络连接，直接打开 `index.html` 即可使用！**
 
 ## 培训内容大纲
 
@@ -104,12 +110,17 @@ wps-excel-training/
 - 条件格式
 - 数据验证
 - 名称管理器
+- 数据分列（新增）
+- 导入外部数据（新增）
 
-### 第5章：实战练习（7-8页）
+### 第5章：实战练习（10页）⭐更新
 - **基础练习**（4个，每个15-20分钟）
   - 员工工资核算、销售数据统计、库存管理、个人理财
 - **高级练习**（3个，每个25-30分钟）
   - 动态仪表板、财务分析、自动报表
+- **人力资源综合实战**（新增，45-60分钟）
+  - 基于140名真实员工数据的综合应用
+  - 日期函数、身份证提取、多条件统计、透视表分析
 
 ## 技术栈
 
@@ -157,11 +168,30 @@ wps-excel-training/
 2. 添加数据文件（.csv）和操作指南（.md）
 3. 在 `index.html` 第5章添加下载链接
 
+## 本地化资源说明
+
+本项目使用以下本地化资源：
+
+| 资源 | 路径 | 说明 |
+|------|------|------|
+| Reveal.js | `lib/reveal.js/` | 幻灯片框架（v4.5.0）|
+| Highlight.js | `lib/highlight.js/` | 代码高亮（v11.8.0）|
+| Inter 字体 | `lib/fonts/inter-*.ttf` | 正文显示字体 |
+| JetBrains Mono | `lib/fonts/jetbrains-*.ttf` | 代码等宽字体 |
+
+**所有资源均已下载到本地，无需网络连接即可完整使用！**
+
 ## 许可协议
 
 本项目仅供学习和培训使用。
 
 ## 更新日志
+
+### v1.1.0 (2026-03-12)
+- ✅ 完全本地化：下载并本地化所有字体资源（Inter + JetBrains Mono）
+- 将第6章人力资源数据分析整合进第5章实战练习
+- 新增练习8：HR综合数据分析（140人真实数据）
+- 更新课程导航和结束页统计
 
 ### v1.0.0 (2024-02-24)
 - 初始版本发布
